@@ -1,4 +1,3 @@
-import { Link } from 'react-router';
 import Navigation from '@/react-app/components/Navigation';
 import ContactSection from '@/react-app/components/ContactSection';
 import { Brain, CheckCircle } from 'lucide-react';

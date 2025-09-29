@@ -81,16 +81,6 @@ export default function TradeCorpPage() {
     }
   ];
 
-  const businessProcess = [
-    { step: 1, title: 'Регистрация контрагента', description: 'в системе' },
-    { step: 2, title: 'Создание договора', description: 'на обслуживание' },
-    { step: 3, title: 'Выпуск топливных карт', description: 'для водителей' },
-    { step: 4, title: 'Привязка карт', description: 'к транспортным средствам' },
-    { step: 5, title: 'Совершение транзакций', description: 'на АЗС' },
-    { step: 6, title: 'Взаиморасчеты', description: 'между участниками' },
-    { step: 7, title: 'Управление картами', description: 'блокировка/восстановление' }
-  ];
-
   return (
     <PageLayout>
       {/* Hero Section */}

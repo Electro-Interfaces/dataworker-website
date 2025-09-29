@@ -1,7 +1,6 @@
 import PageLayout from '@/react-app/components/PageLayout';
 import {
   Monitor,
-  BarChart3,
   Settings,
   Shield,
   Users,
@@ -9,7 +8,6 @@ import {
   CheckCircle,
   Activity,
   Building2,
-  TrendingUp,
   FileText,
   Zap
 } from 'lucide-react';
