@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    color: #202124;
+  }
+}
+
+@layer utilities {
+  .transform-gpu {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Google Store inspired typography with AuraTech aesthetics */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+  }
+  
+  h2 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  
+  p {
+    line-height: 1.7;
+    max-width: 65ch;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  /* Google Store inspired spacing with very tight whitespace */
+  .section-spacing {
+    padding-top: clamp(0.33rem, 1.33vw, 0.67rem);
+    padding-bottom: clamp(0.33rem, 1.33vw, 0.67rem);
+  }
+  
+  .section-gap {
+    margin-bottom: clamp(0.33rem, 1vw, 0.67rem);
+  }
+  
+  .content-spacing {
+    margin-bottom: clamp(0.33rem, 1vw, 0.67rem);
+  }
+  
+  .text-spacing {
+    margin-bottom: clamp(1rem, 2.67vw, 2rem);
+  }
+  
+  /* Clean, spacious layouts */
+  .hero-spacing {
+    padding-top: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(4rem, 10vw, 8rem);
+  }
+  
+  .block-spacing {
+    margin-bottom: clamp(1.33rem, 3.33vw, 2.67rem);
+  }
+}
+
+/* Google Store inspired subtle interactions */
+@layer components {
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease-out, 
+                box-shadow 0.3s ease-out,
+                border-color 0.3s ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .premium-button {
+    transition: all 0.2s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .premium-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+  }
+
+  /* Light gradient backgrounds */
+  .light-gradient-primary {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+  
+  .light-gradient-secondary {
+    background: linear-gradient(135deg, hsl(221 83% 53% / 0.05) 0%, transparent 50%);
+  }
+
+  /* Clean card designs */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(218, 220, 224, 0.5);
+    box-shadow: 0 1px 3px rgba(60, 64, 67, 0.1);
+  }
+
+  .glass-card-light {
+    background: rgba(248, 249, 250, 0.8);
+    border: 1px solid rgba(218, 220, 224, 0.3);
+  }
+
+  /* Clean light cards */
+  .dashboard-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(218, 220, 224, 0.5);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(60, 64, 67, 0.1);
+  }
+
+  .dashboard-card:hover {
+    border-color: hsl(221 83% 53% / 0.3);
+    box-shadow: 0 4px 12px rgba(60, 64, 67, 0.15);
+  }
+
+  /* Input fields for light theme */
+  .input-light {
+    background: #FFFFFF;
+    border: 1px solid rgba(218, 220, 224, 0.8);
+    color: #202124;
+    border-radius: 0.5rem;
+  }
+
+  .input-light:focus {
+    border-color: hsl(221 83% 53%);
+    box-shadow: 0 0 0 3px hsl(221 83% 53% / 0.1);
+    outline: none;
+  }
+
+  .input-light::placeholder {
+    color: #5F6368;
+  }
+
+  /* Subtle light effects */
+  .light-shadow {
+    box-shadow: 0 2px 8px rgba(60, 64, 67, 0.1);
+  }
+
+  .light-shadow:hover {
+    box-shadow: 0 4px 16px rgba(60, 64, 67, 0.15);
+  }
+
+  /* Clean animations */
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Organic light background shapes */
+  .organic-bg-light {
+    background: radial-gradient(ellipse 100% 100% at 20% 30%, hsl(221 83% 53% / 0.03) 0%, transparent 70%),
+                radial-gradient(ellipse 80% 120% at 80% 70%, rgba(52, 168, 83, 0.02) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 90% at 60% 10%, rgba(248, 249, 250, 0.8) 0%, transparent 70%);
+  }
+}
