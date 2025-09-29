@@ -5,11 +5,9 @@ import {
   CreditCard,
   Wrench,
   Clock,
-  Wifi,
   Monitor,
   CheckCircle,
   Zap,
-  Users,
   Building2,
   ArrowRight
 } from 'lucide-react';
@@ -58,14 +56,6 @@ export default function TradeTerminalPage() {
     }
   ];
 
-  const techFeatures = [
-    { label: 'Процессор', value: 'ARM Cortex-A72 quad-core' },
-    { label: 'Дисплей', value: '15.6" Full HD IPS сенсорный' },
-    { label: 'Картридер', value: 'EMV Level 1&2, PCI PTS 5.x' },
-    { label: 'NFC модуль', value: 'ISO14443 A/B, FeliCa' },
-    { label: 'Рабочая температура', value: '-25°C до +60°C' },
-    { label: 'Степень защиты', value: 'IP65' }
-  ];
 
   return (
     <PageLayout>

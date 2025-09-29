@@ -1,13 +1,10 @@
 import PageLayout from '@/react-app/components/PageLayout';
-import { Link } from 'react-router';
 import {
   CreditCard,
   Building2,
   Users,
   BarChart3,
   Shield,
-  ArrowRight,
-  Fuel,
   CheckCircle,
   Banknote,
   Monitor,

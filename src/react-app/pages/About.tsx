@@ -1,49 +1,9 @@
 import Navigation from '@/react-app/components/Navigation';
 import WhatWeDoSection from '@/react-app/components/WhatWeDoSection';
 import { Link } from 'react-router';
-import { Users, Award, Target, Lightbulb, TrendingUp, Globe, Code, Palette, Brain, Bug, Database, Layout, ArrowRight } from 'lucide-react';
+import { Users, Code, Palette, Brain, Bug, Database, Target, Lightbulb, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
-  const stats = [
-    { number: '15+', label: 'Лет на рынке', description: 'Опыт работы в сфере IT' },
-    { number: '200+', label: 'Проектов', description: 'Успешно реализовано' },
-    { number: '50+', label: 'Клиентов', description: 'Доверяют нам' },
-    { number: '99.8%', label: 'Uptime', description: 'Надежность наших систем' }
-  ];
-
-  const values = [
-    {
-      icon: <Target className="w-8 h-8 text-accent" />,
-      title: 'Клиентоориентированность',
-      description: 'Мы создаем решения, которые действительно решают бизнес-задачи клиентов, а не просто следуем техническим трендам. Каждый проект начинается с глубокого понимания потребностей бизнеса.'
-    },
-    {
-      icon: <Award className="w-8 h-8 text-accent" />,
-      title: 'Качество и надежность',
-      description: 'Используем проверенные технологии и лучшие практики разработки. Все наши решения проходят тщательное тестирование и имеют высокие показатели надежности в промышленной эксплуатации.'
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8 text-accent" />,
-      title: 'Инновационный подход',
-      description: 'Постоянно изучаем новые технологии и методологии, чтобы предлагать клиентам наиболее эффективные и современные решения. Инвестируем в R&D и экспериментальные проекты.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-accent" />,
-      title: 'Командная работа',
-      description: 'Наша сила - в команде профессионалов разных специализаций. Мы верим в силу коллективного разума и междисциплинарного подхода к решению сложных задач.'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-accent" />,
-      title: 'Долгосрочное партнерство',
-      description: 'Мы не просто разрабатываем и сдаем проекты - мы строим долгосрочные отношения с клиентами, обеспечиваем поддержку и развитие решений на протяжении всего жизненного цикла.'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-accent" />,
-      title: 'Масштабируемость',
-      description: 'Проектируем все решения с учетом возможности масштабирования. Наши системы готовы к росту бизнеса клиентов и могут адаптироваться к изменяющимся требованиям рынка.'
-    }
-  ];
-
   const teamRoles = [
     {
       icon: <Users className="w-8 h-8" />,
@@ -96,15 +56,6 @@ export default function AboutPage() {
       title: 'Быстрый старт',
       description: 'Команда готова приступить к работе в кратчайшие сроки'
     }
-  ];
-
-  const milestones = [
-    { year: '2009', event: 'Основание компании', description: 'Начало работы в сфере автоматизации АЗС' },
-    { year: '2012', event: 'Первые крупные проекты', description: 'Внедрение систем управления топливом для федеральных сетей' },
-    { year: '2015', event: 'Выход на финтех рынок', description: 'Разработка платежных решений и процессинговых систем' },
-    { year: '2018', event: 'AI и машинное обучение', description: 'Внедрение искусственного интеллекта в продуктовую линейку' },
-    { year: '2021', event: 'Международная экспансия', description: 'Первые проекты в странах СНГ' },
-    { year: '2024', event: 'Новая продуктовая стратегия', description: 'Фокус на отраслевых решениях и готовых продуктах' }
   ];
 
   return (
