@@ -13,7 +13,7 @@ const ProductsSection = () => {
       name: 'TradeGate',
       href: '/products/trade-gate',
       description: 'Система интеграции онлайн-заказов между мобильными приложениями и торговыми сетями. Технологический посредник для корректного обмена данными между разными протоколами',
-      image: '/images/tradegate-platform.png'
+      image: `${import.meta.env.BASE_URL}images/tradegate-platform.png`
     },
     {
       name: 'TradeTerminal',
@@ -31,7 +31,7 @@ const ProductsSection = () => {
       name: 'TradeFrame',
       href: '/products/trade-frame',
       description: 'Веб-платформа для централизованного управления и аналитики всей экосистемы. Контролируйте TradeTerminal и TradeStation из любой точки мира через единый интерфейс',
-      image: '/images/tradeframe-platform.png'
+      image: `${import.meta.env.BASE_URL}images/tradeframe-platform.png`
     }
   ];
 

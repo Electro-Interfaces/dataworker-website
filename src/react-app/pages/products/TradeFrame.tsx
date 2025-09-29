@@ -203,7 +203,7 @@ export default function TradeFramePage() {
               {/* Image */}
               <div className="flex items-center justify-center p-8">
                 <img
-                  src="/images/tradeframe-platform.png"
+                  src={`${import.meta.env.BASE_URL}images/tradeframe-platform.png`}
                   alt="TradeFrame Platform"
                   className="w-3/4 h-auto"
                 />

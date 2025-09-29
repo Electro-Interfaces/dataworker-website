@@ -221,7 +221,7 @@ export default function TradeGatePage() {
               {/* Image */}
               <div>
                 <img
-                  src="/images/tradegate-platform.png"
+                  src={`${import.meta.env.BASE_URL}images/tradegate-platform.png`}
                   alt="TradeGate Technology"
                   className="w-full h-full object-cover"
                 />
