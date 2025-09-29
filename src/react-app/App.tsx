@@ -29,7 +29,7 @@ import ServiceHostToHostPage from "@/react-app/pages/services/HostToHost";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/dataworker-website">
       <Routes>
         <Route path="/" element={<HomePage />} />
         
