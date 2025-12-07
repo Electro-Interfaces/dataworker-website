@@ -1,0 +1,16 @@
+# DataWorker Website
+# https://dataworker.ru
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dataworker.ru/sitemap.xml
+
+# Disallow admin and internal paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/
+
+# Crawl delay for politeness
+Crawl-delay: 1

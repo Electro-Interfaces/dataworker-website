@@ -1,214 +1,297 @@
-import Navigation from '@/react-app/components/Navigation';
+import PageLayout from '@/react-app/components/PageLayout';
+import HexagonPattern from '@/react-app/components/HexagonPattern';
 import { useState } from 'react';
-import { Send, CheckCircle, Mail } from 'lucide-react';
+import { Send, CheckCircle, Mail, MapPin, MessageSquare, AlertCircle, Loader2 } from 'lucide-react';
+import { usePageMeta } from '@/react-app/hooks/usePageMeta';
+
+// TODO: Замените на ваш Formspree endpoint
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
 export default function ContactPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  usePageMeta({
+    title: 'Контакты',
+    description: 'Свяжитесь с DataWorker для обсуждения вашего проекта',
+    keywords: 'контакты, связаться, DataWorker, консультация, техподдержка'
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setIsSubmitting(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        e.currentTarget.reset();
+      } else {
+        throw new Error('Ошибка отправки');
+      }
+    } catch {
+      setError('Не удалось отправить сообщение. Попробуйте позже или напишите на info@dataworker.ru');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contacts = [
     {
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-6 h-6" />,
       title: 'Общие вопросы',
-      email: 'info@dataworker.ru'
+      value: 'info@dataworker.ru',
+      href: 'mailto:info@dataworker.ru'
     },
     {
-      icon: <Mail className="w-8 h-8" />,
-      title: 'Отдел продаж',
-      email: 'sales@dataworker.ru'
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: 'Техподдержка',
+      value: 'support@dataworker.ru',
+      href: 'mailto:support@dataworker.ru'
     },
     {
-      icon: <Mail className="w-8 h-8" />,
-      title: 'Техническая поддержка',
-      email: 'support@dataworker.ru'
+      icon: <MapPin className="w-6 h-6" />,
+      title: 'Офис',
+      value: 'Санкт-Петербург, Россия',
+      href: '#'
     }
   ];
 
   return (
-    <div className="relative">
-      <Navigation />
-      <main className="pt-20 lg:pt-24">
-        {/* Hero Section */}
-        <section className="bg-primary py-16 lg:py-24 pb-24 lg:pb-32 relative overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+    <PageLayout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+        </div>
+
+        <HexagonPattern id="hexagons-contact" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span className="text-xs font-semibold text-white tracking-wide uppercase">Контакты</span>
           </div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Свяжитесь с нами
+          </h1>
+          <p className="text-lg lg:text-xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
+            Готовы обсудить ваш проект, ответить на вопросы или предоставить демо наших продуктов
+          </p>
+        </div>
+      </section>
 
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight tracking-tight">
-                Свяжитесь с нами
-              </h1>
-              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed font-light">
-                Готовы обсудить ваш проект или ответить на вопросы
-              </p>
-            </div>
-          </div>
+      {/* Contact Cards + Form Section */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* Left - Contact Info */}
+            <div className="lg:col-span-2 space-y-6">
+              <div>
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  Контактная информация
+                </h2>
+                <p className="text-gray-500 leading-relaxed">
+                  Выберите удобный способ связи или заполните форму — мы ответим в течение рабочего дня.
+                </p>
+              </div>
 
-          {/* Decorative bottom wave */}
-          <div className="absolute bottom-0 left-0 right-0 -mb-px">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-              <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
-            </svg>
-          </div>
-        </section>
-
-        {/* Contact Methods Section */}
-        <section className="bg-off-white py-8 lg:py-12">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-                Контакты
-              </h2>
-              <p className="text-xl text-medium-gray leading-relaxed max-w-2xl mx-auto">
-                Напишите нам на электронную почту
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-              {contacts.map((contact, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300 mb-6">
+              <div className="space-y-4">
+                {contacts.map((contact, index) => (
+                  <a
+                    key={index}
+                    href={contact.href}
+                    className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
                       {contact.icon}
                     </div>
-                    <h3 className="text-xl font-medium text-dark-gray mb-4">
-                      {contact.title}
-                    </h3>
-                    <a
-                      href={`mailto:${contact.email}`}
-                      className="text-primary hover:text-primary/80 transition-colors"
+                    <div>
+                      <div className="text-sm text-gray-500">{contact.title}</div>
+                      <div className="font-semibold text-gray-900">{contact.value}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+
+              {/* Working Hours */}
+              <div className="bg-gradient-to-br from-blue-700 to-indigo-800 rounded-2xl p-6 text-white">
+                <h3 className="font-bold text-lg mb-3">Время работы</h3>
+                <div className="space-y-2 text-blue-100">
+                  <div className="flex justify-between">
+                    <span>Пн — Пт</span>
+                    <span className="font-medium text-white">9:00 — 18:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Сб — Вс</span>
+                    <span className="font-medium text-white">Выходной</span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-white/20">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                    <span className="text-sm">Техподдержка 24/7</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right - Form */}
+            <div className="lg:col-span-3">
+              <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                  Отправьте сообщение
+                </h2>
+                <p className="text-gray-500 mb-8">
+                  Заполните форму и мы свяжемся с вами
+                </p>
+
+                {isSubmitted ? (
+                  <div className="text-center py-12">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Сообщение отправлено!</h3>
+                    <p className="text-gray-500 mb-6">Мы свяжемся с вами в ближайшее время</p>
+                    <button
+                      onClick={() => setIsSubmitted(false)}
+                      className="text-blue-600 font-medium hover:underline"
                     >
-                      {contact.email}
-                    </a>
+                      Отправить ещё одно сообщение
+                    </button>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Ваше имя *
+                        </label>
+                        <input
+                          type="text"
+                          name="name"
+                          required
+                          className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                          placeholder="Иван Иванов"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          name="email"
+                          required
+                          className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                          placeholder="ivan@company.ru"
+                        />
+                      </div>
+                    </div>
 
-        {/* Contact Form Section */}
-        <section className="bg-light-bg py-8 lg:py-12">
-          <div className="max-w-4xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-                Отправьте сообщение
-              </h2>
-              <p className="text-xl text-medium-gray leading-relaxed">
-                Мы свяжемся с вами в течение рабочего дня
-              </p>
-            </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Компания
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                        placeholder="Название компании"
+                      />
+                    </div>
 
-            <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-md border border-gray-100">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-dark-gray mb-2">
-                      Ваше имя *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 bg-off-white rounded-lg text-dark-gray placeholder-medium-gray border border-border-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                      placeholder="Иван Иванов"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-dark-gray mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-3 bg-off-white rounded-lg text-dark-gray placeholder-medium-gray border border-border-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                      placeholder="ivan@company.ru"
-                    />
-                  </div>
-                </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Тема обращения
+                      </label>
+                      <select
+                        name="subject"
+                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      >
+                        <option>Консультация по продуктам TradeSuite</option>
+                        <option>Заказная разработка</option>
+                        <option>Техническая поддержка</option>
+                        <option>Партнерство</option>
+                        <option>Другое</option>
+                      </select>
+                    </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-dark-gray mb-2">
-                      Компания
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 bg-off-white rounded-lg text-dark-gray placeholder-medium-gray border border-border-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                      placeholder="Название компании"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-dark-gray mb-2">
-                      Телефон
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 bg-off-white rounded-lg text-dark-gray placeholder-medium-gray border border-border-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
-                      placeholder="+7 (900) 123-45-67"
-                    />
-                  </div>
-                </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Сообщение *
+                      </label>
+                      <textarea
+                        name="message"
+                        rows={5}
+                        required
+                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                        placeholder="Опишите вашу задачу или вопрос..."
+                      ></textarea>
+                    </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-dark-gray mb-2">
-                    Тема обращения
-                  </label>
-                  <select className="w-full px-4 py-3 bg-off-white rounded-lg text-dark-gray border border-border-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all">
-                    <option>Консультация по продуктам</option>
-                    <option>Техническая поддержка</option>
-                    <option>Разработка решения</option>
-                    <option>Партнерство</option>
-                    <option>Другое</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-dark-gray mb-2">
-                    Сообщение *
-                  </label>
-                  <textarea
-                    rows={6}
-                    required
-                    className="w-full px-4 py-3 bg-off-white rounded-lg text-dark-gray placeholder-medium-gray border border-border-light focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                    placeholder="Оставьте сообщение..."
-                  ></textarea>
-                </div>
-
-                <div className="flex justify-center pt-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitted}
-                    className={`inline-flex items-center px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 ${
-                      isSubmitted
-                        ? 'bg-green-600 text-white'
-                        : 'bg-primary text-white hover:bg-primary/90 hover:scale-105'
-                    } shadow-lg`}
-                  >
-                    {isSubmitted ? (
-                      <>
-                        <CheckCircle className="w-5 h-5 mr-2" />
-                        Отправлено
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5 mr-2" />
-                        Отправить
-                      </>
+                    {error && (
+                      <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+                        <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                        <span className="text-sm">{error}</span>
+                      </div>
                     )}
-                  </button>
-                </div>
-              </form>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 bg-gradient-to-r from-blue-700 to-indigo-800 text-white hover:shadow-xl hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          Отправка...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          Отправить сообщение
+                        </>
+                      )}
+                    </button>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Хотите узнать больше?
+          </h2>
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            Напишите нам для демонстрации продуктов TradeSuite
+          </p>
+          <a
+            href="mailto:info@dataworker.ru"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <Mail className="w-5 h-5" />
+            info@dataworker.ru
+          </a>
+        </div>
+      </section>
+    </PageLayout>
   );
 }

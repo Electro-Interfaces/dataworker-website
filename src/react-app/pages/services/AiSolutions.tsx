@@ -1,163 +1,225 @@
-import Navigation from '@/react-app/components/Navigation';
-import ContactSection from '@/react-app/components/ContactSection';
-import { Brain, CheckCircle } from 'lucide-react';
+import PageLayout from '@/react-app/components/PageLayout';
+import HexagonPattern from '@/react-app/components/HexagonPattern';
+import { Link } from 'react-router';
+import {
+  Brain,
+  Eye,
+  MessageSquare,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle2,
+  Cpu,
+  Network
+} from 'lucide-react';
+import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
-export default function ServiceAiSolutionsPage() {
-  const mainModules = [
+export default function AiSolutionsPage() {
+  usePageMeta({
+    title: 'AI Решения',
+    description: 'Внедрение искусственного интеллекта и машинного обучения',
+    keywords: 'AI, искусственный интеллект, машинное обучение, предиктивная аналитика, компьютерное зрение, NLP'
+  });
+  const directions = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Анализ и прогнозирование',
-      description: 'Системы машинного обучения для анализа данных и построения прогнозов',
-      features: ['Прогнозирование спроса', 'Анализ трендов', 'Предиктивная аналитика', 'Временные ряды']
+      title: 'Предиктивная аналитика',
+      description: 'Прогнозирование спроса, оттока клиентов и складских запасов с точностью до 98%.',
+      icon: <TrendingUp className="w-8 h-8 text-white" />,
+      features: ['Временные ряды (Time Series)', 'Скоринг клиентов', 'Оптимизация запасов', 'Выявление аномалий'],
+      gradient: 'from-blue-500 to-indigo-600'
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Обработка естественного языка',
-      description: 'Решения на основе NLP для работы с текстом и речью',
-      features: ['Чат-боты', 'Виртуальные ассистенты', 'Анализ текстов', 'Голосовые интерфейсы']
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
       title: 'Компьютерное зрение',
-      description: 'Системы распознавания и анализа изображений',
-      features: ['Контроль качества', 'Распознавание объектов', 'Мониторинг процессов', 'Видеоаналитика']
+      description: 'Автоматизация процессов через распознавание видеопотока: от номеров автомобилей до контроля выкладки товаров.',
+      icon: <Eye className="w-8 h-8 text-white" />,
+      features: ['Pay-by-Plate (оплата по номеру)', 'Контроль очередей', 'Безопасность', 'Face ID'],
+      gradient: 'from-cyan-500 to-blue-600'
     },
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Оптимизация процессов',
-      description: 'Алгоритмы для автоматизации и улучшения бизнес-процессов',
-      features: ['Маршрутизация', 'Планирование ресурсов', 'Оптимизация цен', 'Автоматизация']
+      title: 'NLP и Чат-боты',
+      description: 'Умные ассистенты, понимающие естественный язык. Автоматизация поддержки и обработки документов.',
+      icon: <MessageSquare className="w-8 h-8 text-white" />,
+      features: ['LLM (Large Language Models)', 'Классификация обращений', 'Извлечение данных (OCR)', 'Голосовые помощники'],
+      gradient: 'from-indigo-500 to-purple-600'
+    },
+    {
+      title: 'Smart Pricing',
+      description: 'Системы динамического ценообразования, реагирующие на конкурентов, погоду и остатки в реальном времени.',
+      icon: <Brain className="w-8 h-8 text-white" />,
+      features: ['Анализ эластичности', 'Мониторинг конкурентов', 'Максимизация маржи', 'Персонализация'],
+      gradient: 'from-sky-500 to-blue-600'
     }
   ];
 
-  const targetAudience = [
-    { title: 'Компании с большими объемами данных' },
-    { title: 'Бизнес, требующий прогнозирования' },
-    { title: 'Организации с повторяющимися процессами' },
-    { title: 'Предприятия с запросом на автоматизацию' }
-  ];
-
   return (
-    <div className="relative">
-      <Navigation />
-      <main className="pt-20 lg:pt-24">
-        {/* Hero Section */}
-        <section className="bg-primary py-16 lg:py-24 pb-24 lg:pb-32 relative overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-          </div>
+    <PageLayout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-gray-900 via-blue-950 to-indigo-950 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse"></div>
+          <div className="absolute bottom-[10%] left-[10%] w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[80px]"></div>
+        </div>
 
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight tracking-tight inline-block relative">
-                Разработка AI-решений
-                <sup className="absolute top-0 -right-7 lg:top-0 lg:-right-10">
-                  <div className="w-6 h-6 lg:w-9 lg:h-9 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center">
-                    <Brain className="w-3.5 h-3.5 lg:w-5 lg:h-5 text-white" />
-                  </div>
-                </sup>
-              </h1>
+        <HexagonPattern id="hexagons-ai" />
 
-              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-12 font-light">
-                Создание интеллектуальных систем для автоматизации бизнес-процессов
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-3">
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                  <span className="text-sm text-white/90">Машинное обучение</span>
-                </div>
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                  <span className="text-sm text-white/90">Прогнозирование</span>
-                </div>
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                  <span className="text-sm text-white/90">Автоматизация</span>
-                </div>
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                  <span className="text-sm text-white/90">Аналитика</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Decorative bottom wave */}
-          <div className="absolute bottom-0 left-0 right-0 -mb-px">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-              <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
-            </svg>
-          </div>
-        </section>
-
-        {/* Main Functions Section */}
-        <section className="bg-off-white py-8 lg:py-12">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-                Направления разработки
-              </h2>
-              <p className="text-xl text-medium-gray leading-relaxed max-w-2xl mx-auto">
-                Применяем машинное обучение для решения практических задач
-              </p>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
+              <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <span className="text-xs font-semibold text-white tracking-wide uppercase">Artificial Intelligence</span>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {mainModules.map((module, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 lg:p-10 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                      {module.icon}
-                    </div>
-                    <h3 className="text-2xl lg:text-3xl font-light text-dark-gray leading-tight">
-                      {module.title}
-                    </h3>
-                  </div>
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
+              Решения на базе <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">AI</span>
+            </h1>
 
-                  <p className="text-lg text-medium-gray leading-relaxed mb-6">
-                    {module.description}
-                  </p>
+            <p className="text-xl text-blue-100/90 leading-relaxed mb-10 font-light max-w-2xl">
+              Превращаем данные в конкурентное преимущество. Используем передовые алгоритмы машинного обучения для автоматизации рутины и поиска скрытых закономерностей.
+            </p>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    {module.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span className="text-medium-gray text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact" className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                Внедрить AI
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Target Audience Section */}
-        <section className="bg-light-bg py-8 lg:py-12">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-md border border-gray-100">
-              <div className="text-center mb-12 lg:mb-16">
-                <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-                  Для кого подходит
-                </h2>
-                <p className="text-xl text-medium-gray leading-relaxed max-w-2xl mx-auto">
-                  AI-решения эффективны для различных типов бизнеса
+      {/* Grid */}
+      <section className="bg-white py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Практическая польза
+            </h2>
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+              Мы не занимаемся "хайпом", мы решаем конкретные бизнес-задачи
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {directions.map((item, index) => (
+              <div key={index} className="group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-2xl hover:border-transparent transition-all duration-500">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  {item.icon}
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  {item.description}
                 </p>
-              </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {targetAudience.map((audience, index) => (
-                  <div key={index} className="dashboard-card p-6 text-center hover-lift">
-                    <h3 className="text-lg font-medium text-dark-gray leading-tight">
-                      {audience.title}
-                    </h3>
-                  </div>
-                ))}
+                <div className="grid grid-cols-2 gap-3">
+                  {item.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <CheckCircle2 className={`w-4 h-4 text-blue-500`} />
+                      <span className="text-sm text-gray-700 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <ContactSection />
-      </main>
-    </div>
+       {/* Neuron/Data Section */}
+       <section className="bg-black text-white py-24 relative overflow-hidden">
+         <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black"></div>
+         {/* Animated Grid Background */}
+         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+         
+         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2">
+               <h2 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+                  <span className="text-blue-500">Data-Driven</span> подход к разработке
+               </h2>
+               <p className="text-xl text-gray-400 mb-8">
+                  AI — это не магия, это математика. Мы начинаем с аудита ваших данных, строим гипотезы и только потом обучаем модели.
+               </p>
+               <div className="space-y-6">
+                  <div className="flex gap-4">
+                     <div className="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center border border-blue-700 flex-shrink-0">
+                        <Cpu className="w-6 h-6 text-blue-400" />
+                     </div>
+                     <div>
+                        <h4 className="font-bold text-lg">Собственные модели</h4>
+                        <p className="text-gray-400 text-sm">Fine-tuning LLaMA, BERT и других open-source моделей под ваши задачи. Данные не покидают ваш контур.</p>
+                     </div>
+                  </div>
+                  <div className="flex gap-4">
+                     <div className="w-12 h-12 rounded-full bg-indigo-900/50 flex items-center justify-center border border-indigo-700 flex-shrink-0">
+                        <Network className="w-6 h-6 text-indigo-400" />
+                     </div>
+                     <div>
+                        <h4 className="font-bold text-lg">Интеграция по API</h4>
+                        <p className="text-gray-400 text-sm">Встраиваем ML-сервисы в существующую микросервисную архитектуру через REST/gRPC.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+            <div className="lg:w-1/2 relative">
+               <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+               <div className="relative bg-gray-900 border border-gray-800 rounded-3xl p-8 backdrop-blur-sm">
+                   <div className="flex items-center justify-between mb-6">
+                      <span className="text-xs font-mono text-gray-500">PREDICTION_CONFIDENCE</span>
+                      <span className="text-xs font-mono text-green-400">98.4%</span>
+                   </div>
+                   {/* Visualization bars */}
+                   <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-xs text-gray-400 mb-1">
+                           <span>Demand Forecast (Day +1)</span>
+                           <span>High</span>
+                        </div>
+                        <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                           <div className="h-full bg-blue-500 w-[85%]"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-xs text-gray-400 mb-1">
+                           <span>Demand Forecast (Day +7)</span>
+                           <span>Medium</span>
+                        </div>
+                        <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                           <div className="h-full bg-indigo-500 w-[60%]"></div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-xs text-gray-400 mb-1">
+                           <span>Anomaly Probability</span>
+                           <span>Low</span>
+                        </div>
+                        <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                           <div className="h-full bg-cyan-500 w-[5%]"></div>
+                        </div>
+                      </div>
+                   </div>
+               </div>
+            </div>
+         </div>
+       </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            Готовы к цифровой трансформации?
+          </h2>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+          >
+            Консультация AI-архитектора
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </section>
+    </PageLayout>
   );
 }

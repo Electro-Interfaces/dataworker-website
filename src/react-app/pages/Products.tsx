@@ -1,154 +1,180 @@
 import PageLayout from '@/react-app/components/PageLayout';
+import HexagonPattern from '@/react-app/components/HexagonPattern';
 import { Link } from 'react-router';
-import { ArrowRight } from 'lucide-react';
+import {
+  ArrowRight,
+  Globe,
+  Smartphone,
+  CreditCard,
+  Gift,
+  Workflow,
+  Cloud,
+  RefreshCw,
+  Shield,
+  Zap,
+  Calculator
+} from 'lucide-react';
+import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
 export default function ProductsPage() {
+  usePageMeta({
+    title: 'Продукты',
+    description: 'Продукты экосистемы TradeSuite для автоматизации топливного ритейла',
+    keywords: 'TradeFrame, TradePoint, TradeCorp, TradeGate, TradeBonus, продукты, топливный процессинг, автоматизация АЗС'
+  });
   const products = [
     {
-      name: 'TradeCorp',
-      href: '/products/trade-corp',
-      description: 'Корпоративный топливный процессинг — единая технологическая платформа для управления топливными картами автопарков. Чиповые и виртуальные карты, личный кабинет, мобильное приложение и гибкое управление лимитами.',
-      features: ['Топливные чиповые и виртуальные карты', 'Личный кабинет для управления', 'Мобильное приложение для водителей', 'Интеграция с ERP/CRM системами'],
-      visual: (
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl mb-6 mx-auto flex items-center justify-center relative">
-            {/* Corporate processing dashboard icon */}
-            <div className="w-10 h-8 bg-white rounded-lg flex items-center justify-center">
-              <div className="grid grid-cols-2 gap-1">
-                <div className="w-1 h-1 bg-blue-600 rounded-sm"></div>
-                <div className="w-1 h-1 bg-blue-500 rounded-sm"></div>
-                <div className="w-1 h-1 bg-blue-500 rounded-sm"></div>
-                <div className="w-1 h-1 bg-blue-400 rounded-sm"></div>
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">97%</div>
-            <div className="text-sm text-gray-600">Автоматизация процессов</div>
-          </div>
-        </div>
-      )
+      name: 'TradeFrame',
+      category: 'Cloud Platform',
+      href: '/products/trade-frame',
+      description: 'Облачная платформа для централизованного управления сетью АЗС. Ценообразование, мониторинг резервуаров, сменные отчёты, уведомления в Telegram — всё в одном интерфейсе.',
+      features: ['Управление ценами по всей сети', 'Мониторинг резервуаров в реальном времени', 'Уведомления в Telegram и Email', 'RBAC с 40+ разрешениями'],
+      icon: <Globe className="w-8 h-8" />,
+      image: 'images/dashboard-screen.png',
+      stats: { label: 'Выручка', value: '₽ 3.7M' }
     },
     {
-      name: 'TradeTerminal',
+      name: 'TradePoint',
+      category: 'Front-Office',
       href: '/products/dw-terminal',
-      description: 'Уличные терминалы самообслуживания с большим 17" экраном, купюроприемником и защищенным корпусом. Работают автономно 24/7 в любых погодных условиях.',
-      features: ['Большой 17" сенсорный экран', 'Купюроприемник и кардридер', 'Защищенный всепогодный корпус', 'Автономная работа без интернета'],
-      visual: (
-        <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8">
-          <div className="w-16 h-16 bg-green-600 rounded-xl mb-6 mx-auto flex items-center justify-center">
-            <div className="w-8 h-8 bg-white rounded-lg"></div>
-          </div>
-          <div className="text-center">
-            <div className="text-lg font-bold text-green-600 mb-2">Online</div>
-            <div className="text-sm text-gray-600">Статус терминала</div>
-          </div>
-        </div>
-      )
+      description: 'Программные решения для управления АЗС любого типа: автоматических, с оператором или комбинированных. AutoPoint, FuelPoint, SelfPoint — единая платформа для всех форматов.',
+      features: ['AutoPoint — АКАЗС без персонала', 'FuelPoint — рабочее место оператора', 'SelfPoint — терминал самообслуживания', 'Интеграция с TradeFrame'],
+      icon: <Smartphone className="w-8 h-8" />,
+      image: null,
+      stats: { label: 'Типов терминалов', value: '5' }
+    },
+    {
+      name: 'TradeCorp',
+      category: 'B2B Processing',
+      href: '/products/trade-corp',
+      description: 'Система управления топливным процессингом. Топливные карты, контрагенты, договоры и финансы. Полный цикл работы с корпоративными клиентами.',
+      features: ['Корпоративные топливные карты', 'Гибкие лимиты и ограничения', 'Личный кабинет для клиентов', 'Интеграция с 1С и ERP'],
+      icon: <CreditCard className="w-8 h-8" />,
+      image: 'images/corp-cards.png',
+      stats: { label: 'Активных карт', value: '12,847' }
     },
     {
       name: 'TradeGate',
+      category: 'Integration Hub',
       href: '/products/trade-gate',
-      description: 'Система интеграции онлайн-заказов между мобильными приложениями и торговыми сетями. Технологический посредник для корректного обмена данными между разными протоколами.',
-      features: ['Приём заказов от мобильных приложений', 'Передача заказов в торговые сети', 'Мониторинг транзакций', 'Отчётность и аналитика'],
-      visual: (
-        <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8">
-          <div className="w-16 h-16 bg-purple-600 rounded-xl mb-6 mx-auto flex items-center justify-center">
-            <div className="w-8 h-8 bg-white rounded-lg"></div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-            <div className="text-sm text-gray-600">Обработка заказов</div>
-          </div>
-        </div>
-      )
+      description: 'Интеграция с топливными агрегаторами: Яндекс.Заправки, СберАвто и другими. Принимайте онлайн-заказы без изменения существующей инфраструктуры.',
+      features: ['Яндекс.Заправки и СберАвто', 'Обработка онлайн-заказов', 'Мониторинг транзакций', 'Автоматическая сверка'],
+      icon: <Workflow className="w-8 h-8" />,
+      image: null,
+      stats: { label: 'Заказов сегодня', value: '4,519' }
     },
     {
-      name: 'TradeStation',
-      href: '/products/dw-station',
-      description: 'Программный комплекс для управления оборудованием АЗС/АГЗС. Модульные заправочные станции с интеллектуальной системой управления, продвинутой безопасностью и энергоэффективными технологиями.',
-      features: ['Модульная архитектура', 'Система самодиагностики', 'Многоуровневая безопасность', 'Централизованное управление'],
-      visual: (
-        <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-8">
-          <div className="w-16 h-16 bg-orange-600 rounded-xl mb-6 mx-auto flex items-center justify-center">
-            <div className="w-8 h-8 bg-white rounded-lg"></div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">87%</div>
-            <div className="text-sm text-gray-600">Уровень топлива</div>
-          </div>
-        </div>
-      )
-    },
-    {
-      name: 'TradeFrame',
-      href: '/products/trade-frame',
-      description: 'Веб-платформа для централизованного управления и аналитики всей экосистемы. Единый интерфейс для контроля TradeTerminal и TradeStation из любой точки мира с продвинутой системой отчетности.',
-      features: ['Единый дашборд управления', 'Продвинутая аналитика', 'Удаленная настройка', 'Многоуровневый доступ'],
-      visual: (
-        <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-8">
-          <div className="w-16 h-16 bg-slate-600 rounded-xl mb-6 mx-auto flex items-center justify-center">
-            <div className="w-8 h-8 bg-white rounded-lg"></div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-slate-600 mb-2">24/7</div>
-            <div className="text-sm text-gray-600">Онлайн управление</div>
-          </div>
-        </div>
-      )
+      name: 'TradeBonus',
+      category: 'Loyalty System',
+      href: '/products/dw-loyalty',
+      description: 'B2C программа лояльности для розничных клиентов. Бонусные баллы, скидки и персональные предложения для увеличения повторных покупок.',
+      features: ['Бонусные баллы за покупки', 'Персональные предложения', 'Мобильное приложение', 'Аналитика поведения клиентов'],
+      icon: <Gift className="w-8 h-8" />,
+      image: null,
+      stats: { label: 'Участников', value: '43,293' }
     }
   ];
 
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-primary py-32 lg:py-48 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 lg:py-32 relative overflow-hidden">
         {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent" />
-          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(3,155,229,0.1)_0%,transparent_50%)]" />
+        <div className="absolute inset-0">
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
+        <HexagonPattern id="hexagons-products" />
+
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-5xl lg:text-7xl font-light text-white mb-8 lg:mb-12 tracking-tight leading-tight">
-            Продукты DataWorker
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span className="text-xs font-semibold text-white tracking-wide uppercase">5 продуктов</span>
+          </div>
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Экосистема TradeSuite
           </h1>
-          <p className="text-xl lg:text-2xl text-white/80 font-light leading-relaxed">
-            Готовые решения для быстрого внедрения и автоматизации бизнес-процессов
+          <p className="text-lg lg:text-xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
+            Комплексная автоматизация топливного бизнеса — от терминалов самообслуживания до облачной платформы управления
           </p>
         </div>
       </section>
 
       {/* Products Section */}
-      <section className="py-32 lg:py-48 bg-white">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="space-y-16 lg:space-y-24">
+          <div className="space-y-12 lg:space-y-20">
             {products.map((product, index) => (
-              <div key={product.name} className={`grid lg:grid-cols-2 gap-16 lg:gap-24 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}>
+              <div
+                key={product.name}
+                className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
+                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
+              >
                 {/* Visual */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                  {product.visual}
+                  <div className="relative group">
+                    {/* Glow effect */}
+                    <div className="absolute -inset-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
+
+                    {/* Main container */}
+                    <div className="relative bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 rounded-2xl p-6 overflow-hidden min-h-[280px] flex flex-col justify-center">
+                      {/* Background decorations */}
+                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/10 rounded-full blur-2xl"></div>
+                      <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl"></div>
+
+                      {product.image ? (
+                        /* Screenshot */
+                        <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10">
+                          <img
+                            src={`${import.meta.env.BASE_URL}${product.image}`}
+                            alt={product.name}
+                            className="w-full h-auto transform group-hover:scale-[1.02] transition-transform duration-500"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        /* Icon-based visual */
+                        <div className="text-center py-8">
+                          <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-xl">
+                            {product.icon}
+                          </div>
+                          <div className="text-4xl font-bold text-white mb-2">{product.stats.value}</div>
+                          <div className="text-sm text-blue-200/80 uppercase tracking-wider">{product.stats.label}</div>
+                        </div>
+                      )}
+
+                      {/* Stats overlay for image cards */}
+                      {product.image && (
+                        <div className="absolute bottom-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl border border-gray-100">
+                          <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">{product.stats.label}</div>
+                          <div className="text-lg font-bold text-blue-600">{product.stats.value}</div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                  <h2 className="text-3xl lg:text-5xl font-light text-primary mb-6 lg:mb-8 tracking-tight leading-tight">
+                  <div className="text-sm font-bold text-blue-600 uppercase tracking-wide mb-3">
+                    {product.category}
+                  </div>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
                     {product.name}
                   </h2>
-                  <p className="text-lg lg:text-xl text-gray-600 mb-8 lg:mb-10 leading-relaxed">
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                     {product.description}
                   </p>
 
                   {/* Features */}
-                  <div className="mb-10 lg:mb-12">
-                    <h3 className="text-lg font-semibold text-primary mb-6">Ключевые возможности:</h3>
-                    <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="mb-8">
+                    <div className="grid sm:grid-cols-2 gap-3">
                       {product.features.map((feature) => (
-                        <div key={feature} className="flex items-center">
-                          <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                          <span className="text-gray-700">{feature}</span>
+                        <div key={feature} className="flex items-center bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100">
+                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-700 text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -157,14 +183,174 @@ export default function ProductsPage() {
                   {/* CTA */}
                   <Link
                     to={product.href}
-                    className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-2xl font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-xl"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-700 to-indigo-800 text-white rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Подробнее о {product.name}
-                    <ArrowRight className="w-5 h-5 ml-3" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Deployment Options Section */}
+      <section id="deployment" className="py-20 lg:py-28 bg-white scroll-mt-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Варианты развёртывания
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Выберите подходящий вариант размещения системы — в облаке или на вашей инфраструктуре
+            </p>
+          </div>
+
+          {/* Two deployment options */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            {/* Cloud option - recommended */}
+            <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200">
+              <div className="absolute -top-3 left-6">
+                <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full uppercase tracking-wide">
+                  Рекомендуем
+                </span>
+              </div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+                  <Cloud className="w-7 h-7" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Облачное решение</h3>
+                  <p className="text-sm text-gray-500">На серверах DataWorker</p>
+                </div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                {[
+                  'Быстрый старт за несколько дней',
+                  'Предсказуемые ежемесячные платежи',
+                  'Обновления и поддержка включены',
+                  'Резервное копирование и мониторинг 24/7',
+                  'Масштабирование по мере роста',
+                  'Не нужны собственные IT-специалисты'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="pt-4 border-t border-blue-200">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold text-gray-900">Идеально для:</span> большинства сетей АЗС, которые хотят сфокусироваться на бизнесе, а не на IT
+                </p>
+              </div>
+            </div>
+
+            {/* On-premise option */}
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center text-white">
+                  <Shield className="w-7 h-7" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">На вашей инфраструктуре</h3>
+                  <p className="text-sm text-gray-500">On-premise развёртывание</p>
+                </div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                {[
+                  'Полный контроль над данными',
+                  'Размещение в вашем дата-центре',
+                  'Соответствие внутренним политикам ИБ',
+                  'Интеграция с корпоративной сетью',
+                  'Возможность доработки под требования',
+                  'Техподдержка и обновления по договору'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 bg-gray-400 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="pt-4 border-t border-gray-200">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold text-gray-900">Идеально для:</span> крупных сетей с собственной IT-инфраструктурой и строгими требованиями к безопасности
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Cloud benefits */}
+          <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 rounded-2xl p-8 lg:p-12">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-bold text-white">
+                Почему облако — выгодный выбор
+              </h3>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <Calculator className="w-6 h-6" />,
+                  title: 'Нет капитальных затрат',
+                  description: 'Вместо крупной разовой инвестиции — фиксированная ежемесячная плата, которую легко планировать'
+                },
+                {
+                  icon: <RefreshCw className="w-6 h-6" />,
+                  title: 'Обновления бесплатно',
+                  description: 'Новые функции и улучшения появляются автоматически, без дополнительных платежей'
+                },
+                {
+                  icon: <Zap className="w-6 h-6" />,
+                  title: 'Экономия на IT',
+                  description: 'Не нужно содержать серверы, системных администраторов и закупать лицензии'
+                }
+              ].map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h4 className="font-bold text-white mb-2">{benefit.title}</h4>
+                  <p className="text-blue-200 text-sm">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-500 text-sm">
+              Не уверены какой вариант подходит? <Link to="/contact" className="text-blue-600 font-medium hover:underline">Проконсультируем бесплатно</Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Готовы начать?
+          </h2>
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            Расскажем подробнее о продуктах, рассчитаем стоимость и проведём демонстрацию
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-white text-blue-700 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              Получить консультацию
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

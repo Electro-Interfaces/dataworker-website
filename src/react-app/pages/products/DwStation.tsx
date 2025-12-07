@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react';
 import PageLayout from '@/react-app/components/PageLayout';
 import { Fuel, CreditCard, Settings, Infinity, Monitor, Cloud, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
+import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
 export default function ProductDwStationPage() {
+  usePageMeta({
+    title: 'DW Station',
+    description: 'Терминальное решение для АЗС',
+    keywords: 'DW Station, терминал, АЗС, POS, касса самообслуживания'
+  });
   const [activeFeature, setActiveFeature] = useState(0);
 
   // Auto-scroll through features for demo effect
@@ -70,7 +76,7 @@ export default function ProductDwStationPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-primary hero-spacing pb-32 lg:pb-40 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-32 lg:pt-32 lg:pb-40 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent" />
@@ -81,7 +87,7 @@ export default function ProductDwStationPage() {
           <div className="grid lg:grid-cols-2 gap-24 lg:gap-32 items-center">
             {/* Content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-6xl lg:text-9xl xl:text-[12rem] font-extralight text-white content-spacing tracking-tighter leading-none">
+              <h1 className="text-6xl lg:text-9xl xl:text-[12rem] font-extralight text-white mb-4 tracking-tighter leading-none">
                 <span className="font-black bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">TradeStation</span>
               </h1>
               <h2 className="text-3xl lg:text-6xl xl:text-7xl font-bold text-accent mb-12 lg:mb-16 tracking-tight leading-tight">
@@ -96,10 +102,11 @@ export default function ProductDwStationPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="w-[500px] h-[400px] bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex items-center justify-center p-8 hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="https://mocha-cdn.com/01988f5f-0cbe-7d57-99ac-bafebbffc5b0/dw-station-clean.png" 
+                  <img
+                    src="https://mocha-cdn.com/01988f5f-0cbe-7d57-99ac-bafebbffc5b0/dw-station-clean.png"
                     alt="TradeStation Management System"
                     className="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
                 {/* Clean accent elements */}
@@ -119,11 +126,11 @@ export default function ProductDwStationPage() {
       </section>
 
       {/* Platform Features Section */}
-      <section className="bg-white section-spacing">
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section header */}
-          <div className="text-center content-spacing">
-            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-extralight text-primary content-spacing tracking-tighter leading-none">
+          <div className="text-center mb-4">
+            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-extralight text-primary mb-4 tracking-tighter leading-none">
               Единая платформа
               <br />
               <span className="font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">для любых задач</span>
@@ -152,11 +159,11 @@ export default function ProductDwStationPage() {
       </section>
 
       {/* Interactive Key Features Section */}
-      <section className="bg-light-bg section-spacing">
+      <section className="bg-gray-50 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section header */}
-          <div className="text-center content-spacing">
-            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-extralight text-primary content-spacing tracking-tighter leading-none">
+          <div className="text-center mb-4">
+            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-extralight text-primary mb-4 tracking-tighter leading-none">
               Ключевые
               <br />
               <span className="font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">возможности</span>
@@ -168,10 +175,11 @@ export default function ProductDwStationPage() {
             <div className="lg:sticky lg:top-32">
               <div className="relative">
                 <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100/50">
-                  <img 
-                    src="https://mocha-cdn.com/01988f5f-0cbe-7d57-99ac-bafebbffc5b0/dw-station-control.jpg" 
+                  <img
+                    src="https://mocha-cdn.com/01988f5f-0cbe-7d57-99ac-bafebbffc5b0/dw-station-control.jpg"
                     alt="TradeStation Dashboard Interface"
                     className="w-full h-80 object-cover rounded-2xl"
+                    loading="lazy"
                   />
                   
                   {/* Interactive overlay highlighting different sections */}
@@ -217,11 +225,11 @@ export default function ProductDwStationPage() {
       </section>
 
       {/* Integration Section */}
-      <section className="bg-white section-spacing">
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
           {/* Section header */}
-          <div className="content-spacing">
-            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-extralight text-primary content-spacing tracking-tighter leading-none">
+          <div className="mb-4">
+            <h2 className="text-6xl lg:text-8xl xl:text-9xl font-extralight text-primary mb-4 tracking-tighter leading-none">
               Создан для работы
               <br />
               <span className="font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">с вашими системами</span>
@@ -261,7 +269,7 @@ export default function ProductDwStationPage() {
       </section>
 
       {/* SaaS Model Section */}
-      <section className="bg-gradient-to-br from-primary to-primary/90 section-spacing">
+      <section className="bg-gradient-to-br from-primary to-primary/90 py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="mb-16 lg:mb-20">
             <div className="w-32 h-32 lg:w-40 lg:h-40 bg-white/10 backdrop-blur-xl rounded-3xl flex items-center justify-center mx-auto mb-12 lg:mb-16">
@@ -273,7 +281,7 @@ export default function ProductDwStationPage() {
               </div>
             </div>
             
-            <h2 className="text-5xl lg:text-7xl xl:text-8xl font-extralight text-white content-spacing tracking-tighter leading-none">
+            <h2 className="text-5xl lg:text-7xl xl:text-8xl font-extralight text-white mb-4 tracking-tighter leading-none">
               Начните с малого.
               <br />
               <span className="font-black bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">Растите без ограничений.</span>
@@ -287,9 +295,9 @@ export default function ProductDwStationPage() {
       </section>
 
       {/* TradeFrame Integration Section */}
-      <section className="bg-white section-spacing">
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="bg-light-bg rounded-3xl p-12 shadow-xl">
+          <div className="bg-gray-50 rounded-3xl p-12 shadow-xl">
             <div className="w-20 h-20 bg-gradient-to-br from-accent to-primary rounded-3xl flex items-center justify-center mx-auto mb-8">
               <Monitor className="w-10 h-10 text-white" />
             </div>
@@ -313,7 +321,7 @@ export default function ProductDwStationPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-blue-900/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Settings className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-primary mb-2">Настройка цен</h3>
@@ -331,7 +339,7 @@ export default function ProductDwStationPage() {
 
             <Link
               to="/products/trade-frame"
-              className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-2xl font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-blue-900 text-white rounded-2xl font-semibold hover:bg-blue-900/90 hover:scale-105 transition-all duration-300 shadow-xl"
             >
               Узнать больше о TradeFrame
               <ArrowRight className="w-5 h-5 ml-3" />
@@ -341,10 +349,10 @@ export default function ProductDwStationPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-light-bg section-spacing">
+      <section className="bg-gray-50 py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="content-spacing">
-            <h2 className="text-5xl lg:text-7xl xl:text-8xl font-extralight text-primary content-spacing tracking-tighter leading-none">
+          <div className="mb-4">
+            <h2 className="text-5xl lg:text-7xl xl:text-8xl font-extralight text-primary mb-4 tracking-tighter leading-none">
               Готовы централизовать
               <br />
               <span className="font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">управление?</span>

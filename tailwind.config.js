@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-hero': 'linear-gradient(to bottom right, #1e40af, #1e3a8a, #312e81)',
+        'gradient-card': 'linear-gradient(to bottom right, #1d4ed8, #4338ca)',
+      },
       colors: {
         primary: 'hsl(221 83% 53%)',        // Primary blue
         'primary-dark': 'hsl(221 83% 43%)',  // Darker blue for hover states

@@ -1,8 +1,14 @@
 import PageLayout from '@/react-app/components/PageLayout';
 import { Link } from 'react-router';
 import { ArrowRight, Database, Cloud, Smartphone, CreditCard, Building2, Truck, ShoppingCart, Users } from 'lucide-react';
+import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
 export default function IntegrationsPage() {
+  usePageMeta({
+    title: 'Интеграции',
+    description: 'Интеграции TradeSuite с внешними системами и сервисами',
+    keywords: 'интеграции, API, 1С, ERP, CRM, платежные системы, логистика'
+  });
   const integrationCategories = [
     {
       title: 'Учетные системы',
@@ -105,7 +111,7 @@ export default function IntegrationsPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-primary hero-spacing relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent" />
@@ -113,19 +119,19 @@ export default function IntegrationsPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <h1 className="text-6xl lg:text-9xl xl:text-[12rem] font-extralight text-white content-spacing tracking-tighter leading-none">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 tracking-tight leading-tight">
             Интеграции
             <br />
             <span className="font-black bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">без границ</span>
           </h1>
-          <p className="text-2xl lg:text-4xl text-white/80 font-light leading-relaxed max-w-4xl mx-auto text-spacing">
+          <p className="text-lg lg:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto mb-8">
             Подключайтесь к любым системам через открытые API и готовые коннекторы
           </p>
         </div>
       </section>
 
       {/* API Features */}
-      <section className="bg-white section-spacing">
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-5xl lg:text-7xl font-light text-primary mb-12 lg:mb-16 tracking-tight leading-tight">
             Открытая архитектура
@@ -160,7 +166,7 @@ export default function IntegrationsPage() {
       </section>
 
       {/* Integration Categories */}
-      <section className="bg-light-bg section-spacing">
+      <section className="bg-gray-50 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-24 lg:mb-32">
             <h2 className="text-5xl lg:text-7xl font-light text-primary mb-12 lg:mb-16 tracking-tight leading-tight">
@@ -202,7 +208,7 @@ export default function IntegrationsPage() {
       </section>
 
       {/* Custom Integration CTA */}
-      <section className="bg-white section-spacing">
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-5xl lg:text-7xl font-light text-primary mb-12 lg:mb-16 tracking-tight leading-tight">
             Нужна особая интеграция?
@@ -235,10 +241,10 @@ export default function IntegrationsPage() {
               <ArrowRight className="w-6 h-6 ml-4" />
             </Link>
             <Link
-              to="/ecosystem"
+              to="/products"
               className="inline-flex items-center px-10 py-5 bg-white text-primary border-2 border-primary rounded-3xl font-bold text-xl hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300"
             >
-              Экосистема DataWorker
+              Наши продукты
               <ArrowRight className="w-6 h-6 ml-4" />
             </Link>
           </div>

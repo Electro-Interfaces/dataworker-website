@@ -1,8 +1,19 @@
 import PageLayout from '@/react-app/components/PageLayout';
-import { Link } from 'react-router';
+import ProductHero from '@/react-app/components/ProductHero';
+import ModuleTabs from '@/react-app/components/ModuleTabs';
+import GradientSection from '@/react-app/components/GradientSection';
+import AdvantagesGrid from '@/react-app/components/AdvantagesGrid';
+import CTASection from '@/react-app/components/CTASection';
+import DeploymentOptions from '@/react-app/components/DeploymentOptions';
 import {
-  ArrowRight,
-  CheckCircle,
+  OrdersIllustration,
+  RoutingIllustration,
+  MonitoringIllustration,
+  ReportsIllustration,
+  IntegrationsIllustration,
+  AdminIllustration
+} from '@/react-app/components/TradeGateIllustrations';
+import {
   Smartphone,
   Store,
   FileText,
@@ -10,59 +21,116 @@ import {
   Workflow,
   Shield,
   TrendingUp,
-  Zap
+  Zap,
+  RefreshCw,
+  Globe,
+  Settings,
+  BarChart3
 } from 'lucide-react';
+import { usePageMeta } from '@/react-app/hooks/usePageMeta';
+
+// Hero Illustration Component
+const HeroIllustration = () => (
+  <div className="relative rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl p-6">
+    <div className="w-[380px] h-[240px] relative">
+      {/* Center hub */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl">
+        <Workflow className="w-10 h-10 text-white" />
+      </div>
+      {/* Connecting nodes */}
+      <div className="absolute top-4 left-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+        <Smartphone className="w-6 h-6 text-white/70" />
+      </div>
+      <div className="absolute top-4 right-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+        <Store className="w-6 h-6 text-white/70" />
+      </div>
+      <div className="absolute bottom-4 left-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+        <Activity className="w-6 h-6 text-white/70" />
+      </div>
+      <div className="absolute bottom-4 right-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+        <FileText className="w-6 h-6 text-white/70" />
+      </div>
+      {/* Connecting lines */}
+      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 380 240">
+        <line x1="65" y1="60" x2="150" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+        <line x1="315" y1="60" x2="230" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+        <line x1="65" y1="180" x2="150" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+        <line x1="315" y1="180" x2="230" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+      </svg>
+    </div>
+    {/* Stats badge */}
+    <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-blue-600/90 to-blue-800/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
+      <span className="text-blue-100/80 text-[10px] uppercase tracking-wider block mb-1">Обработано сегодня</span>
+      <span className="text-white font-bold text-xl">4,519</span>
+    </div>
+  </div>
+);
 
 export default function TradeGatePage() {
+  usePageMeta({
+    title: 'TradeGate',
+    description: 'Интеграция с топливными агрегаторами',
+    keywords: 'TradeGate, интеграция, агрегаторы, мобильные приложения, API'
+  });
 
-  const mainModules = [
+  const systemModules = [
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: 'Приём заказов от мобильных приложений',
-      description: 'Получение и обработка данных в реальном времени',
-      features: ['Прием заказов', 'Валидация данных', 'Обработка в реальном времени', 'Поддержка протоколов']
+      icon: <Smartphone className="w-6 h-6" />,
+      title: 'Приём заказов',
+      subtitle: '/orders',
+      description: 'Получение и обработка заказов от мобильных приложений в реальном времени. Поддержка различных протоколов обмена данными. Автоматическая валидация входящих запросов и маршрутизация по правилам.',
+      features: ['Прием заказов 24/7', 'Валидация данных', 'Реальное время', 'Мульти-протоколы'],
+      illustration: <OrdersIllustration />
     },
     {
-      icon: <Store className="w-8 h-8" />,
-      title: 'Передача заказов в торговые сети',
-      description: 'Преобразование протоколов и маршрутизация в нужные системы',
-      features: ['Преобразование протоколов', 'Маршрутизация', 'Интеграция с сетями', 'Синхронизация']
+      icon: <Store className="w-6 h-6" />,
+      title: 'Передача в сети',
+      subtitle: '/routing',
+      description: 'Преобразование протоколов и маршрутизация заказов в нужные торговые сети. Автоматический выбор оптимального маршрута. Гарантированная доставка с повторными попытками при сбоях.',
+      features: ['Преобразование протоколов', 'Умная маршрутизация', 'Гарантия доставки', 'Retry-механизмы'],
+      illustration: <RoutingIllustration />
     },
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: <Activity className="w-6 h-6" />,
+      title: 'Мониторинг',
+      subtitle: '/monitoring',
+      description: 'Отслеживание статуса каждого заказа в реальном времени. Дашборды с ключевыми метриками. Мгновенные уведомления об ошибках и критических событиях.',
+      features: ['Статусы в реальном времени', 'Дашборды метрик', 'Алерты и уведомления', 'История операций'],
+      illustration: <MonitoringIllustration />
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
       title: 'Отчётность',
-      description: 'Корректная передача данных для отчетности и бухгалтерии',
-      features: ['Отчетность', 'Документооборот', 'Экспорт данных', 'Соответствие законодательству']
+      subtitle: '/reports',
+      description: 'Корректная передача данных для отчетности и бухгалтерии. Автоматическое формирование документов. Экспорт в различных форматах для интеграции с учётными системами.',
+      features: ['Автоотчёты', 'Документооборот', 'Экспорт Excel/PDF', 'Интеграция с 1С'],
+      illustration: <ReportsIllustration />
     },
     {
-      icon: <Activity className="w-8 h-8" />,
-      title: 'Мониторинг транзакций',
-      description: 'Статус каждого заказа — ожидание, выполнен, ошибка или отмена',
-      features: ['Отслеживание статусов', 'Мониторинг в реальном времени', 'Уведомления', 'Аналитика']
+      icon: <Workflow className="w-6 h-6" />,
+      title: 'Интеграции',
+      subtitle: '/integrations',
+      description: 'Готовые коннекторы для популярных мобильных приложений и торговых сетей. Гибкий API для кастомных интеграций. Документация и SDK для разработчиков.',
+      features: ['Готовые коннекторы', 'REST API', 'Webhooks', 'SDK для разработчиков'],
+      illustration: <IntegrationsIllustration />
+    },
+    {
+      icon: <Settings className="w-6 h-6" />,
+      title: 'Администрирование',
+      subtitle: '/admin',
+      description: 'Управление пользователями и правами доступа. Настройка правил маршрутизации. Конфигурация уведомлений и алертов. Журнал аудита всех действий.',
+      features: ['Роли и права', 'Правила маршрутизации', 'Настройка алертов', 'Журнал аудита'],
+      illustration: <AdminIllustration />
     }
   ];
 
   const advantages = [
-    {
-      icon: <Workflow className="w-8 h-8" />,
-      title: 'Сопряжение разных протоколов',
-      description: 'Унификация обмена данными между множеством приложений и сетей'
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Прозрачность',
-      description: 'Все участники процесса видят актуальные статусы'
-    },
-    {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Надёжность',
-      description: 'Встроенные механизмы контроля ошибок и уведомлений'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Масштабируемость',
-      description: 'Лёгкое подключение новых приложений и торговых сетей'
-    }
+    { icon: <Workflow className="w-6 h-6" />, title: 'Унификация протоколов', description: 'Единый формат обмена данными между множеством систем' },
+    { icon: <Shield className="w-6 h-6" />, title: 'Прозрачность', description: 'Все участники видят актуальные статусы заказов' },
+    { icon: <RefreshCw className="w-6 h-6" />, title: 'Надёжность', description: 'Встроенные механизмы контроля ошибок и retry' },
+    { icon: <TrendingUp className="w-6 h-6" />, title: 'Масштабируемость', description: 'Лёгкое подключение новых приложений и сетей' },
+    { icon: <Zap className="w-6 h-6" />, title: 'Скорость', description: 'Обработка тысяч заказов в секунду' },
+    { icon: <Globe className="w-6 h-6" />, title: 'Доступность', description: 'Работа 24/7 с SLA 99.9%' }
   ];
 
   const targetAudience = [
@@ -77,233 +145,81 @@ export default function TradeGatePage() {
       description: 'Доступ к широкому пулу поставщиков через единый интерфейс'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Клиенты',
-      description: 'Оформление и выполнение заказов в привычных приложениях без задержек'
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: 'Агрегаторы',
+      description: 'Централизованное управление заказами из разных источников'
     }
   ];
 
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-primary py-16 lg:py-24 pb-24 lg:pb-32 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-        </div>
+      <ProductHero
+        title="Trade"
+        titleAccent="Gate"
+        badge="Integration Hub"
+        badgeColor="green"
+        description="Система интеграции онлайн-заказов."
+        subdescription="Связующее звено между приложениями и торговыми сетями."
+        illustration={<HeroIllustration />}
+        patternId="hexagons-gate"
+      />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Main heading with icon */}
-            <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight tracking-tight inline-block relative">
-              TradeGate
-              <sup className="absolute top-0 -right-7 lg:top-0 lg:-right-10">
-                <div className="w-6 h-6 lg:w-9 lg:h-9 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center">
-                  <Workflow className="w-3.5 h-3.5 lg:w-5 lg:h-5 text-white" />
-                </div>
-              </sup>
-            </h1>
-
-            {/* Description */}
-            <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-12 font-light">
-              Система интеграции онлайн-заказов между мобильными приложениями и торговыми сетями
-            </p>
-
-            {/* Key features pills */}
-            <div className="flex flex-wrap justify-center gap-3">
-              <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <span className="text-sm text-white/90">Приём заказов</span>
-              </div>
-              <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <span className="text-sm text-white/90">Интеграция</span>
-              </div>
-              <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <span className="text-sm text-white/90">Мониторинг</span>
-              </div>
-              <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <span className="text-sm text-white/90">Надёжность</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Decorative bottom wave */}
-        <div className="absolute bottom-0 left-0 right-0 -mb-px">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
-            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
-          </svg>
-        </div>
-      </section>
-
-      {/* Main Functions Section */}
-      <section className="bg-off-white py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Section header */}
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-              Основные возможности
-            </h2>
-            <p className="text-xl text-medium-gray leading-relaxed max-w-2xl mx-auto">
-              Технологический посредник для корректного обмена данными
-            </p>
-          </div>
-
-          {/* Modules Grid */}
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {mainModules.map((module, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 lg:p-10 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-                {/* Icon and Title */}
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                    {module.icon}
-                  </div>
-                  <h3 className="text-2xl lg:text-3xl font-light text-dark-gray leading-tight">
-                    {module.title}
-                  </h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-lg text-medium-gray leading-relaxed mb-6">
-                  {module.description}
-                </p>
-
-                {/* Features */}
-                <div className="grid grid-cols-2 gap-3">
-                  {module.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                      <span className="text-medium-gray text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* System Modules */}
+      <ModuleTabs
+        title="Функции TradeGate"
+        subtitle="Технологический посредник для корректного обмена данными"
+        modules={systemModules}
+      />
 
       {/* Advantages Section */}
-      <section className="bg-light-bg py-8 lg:py-12">
+      <section className="bg-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-              Преимущества
-            </h2>
-            <p className="text-xl text-medium-gray leading-relaxed max-w-2xl mx-auto">
-              Почему выбирают TradeGate
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {advantages.map((advantage, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
-                  {advantage.icon}
-                </div>
-                <h3 className="text-xl font-bold text-dark-gray mb-4">
-                  {advantage.title}
-                </h3>
-                <p className="text-medium-gray leading-relaxed">
-                  {advantage.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Platform Section */}
-      <section className="bg-white py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
-            <div className="grid lg:grid-cols-2">
-              {/* Image */}
-              <div>
-                <img
-                  src={`${import.meta.env.BASE_URL}images/tradegate-platform.png`}
-                  alt="TradeGate Technology"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Text */}
-              <div className="p-8 lg:p-10 flex flex-col justify-center">
-                <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-                  Технологический посредник
-                </h2>
-                <p className="text-xl text-medium-gray leading-relaxed">
-                  TradeGate работает как связующее звено между мобильными приложениями и торговыми сетями. Система обеспечивает корректный обмен данными между разными протоколами, унифицируя процесс приёма и передачи заказов без участия в самом процессе оформления или обработке платежей.
-                </p>
-              </div>
-            </div>
-          </div>
+          <AdvantagesGrid
+            title="Преимущества TradeGate"
+            subtitle="Почему компании выбирают нашу платформу интеграции"
+            advantages={advantages}
+            variant="light"
+          />
         </div>
       </section>
 
       {/* Target Audience Section */}
-      <section className="bg-light-bg py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-md border border-gray-100">
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-4xl lg:text-5xl font-light text-dark-gray mb-6 leading-tight">
-                Для кого
-              </h2>
-              <p className="text-xl text-medium-gray leading-relaxed max-w-2xl mx-auto">
-                Решение для всех участников процесса онлайн-заказов
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-              {targetAudience.map((audience, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-all duration-300">
-                    <div className="text-primary">
-                      {audience.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-dark-gray mb-4">
-                    {audience.title}
-                  </h3>
-                  <p className="text-medium-gray leading-relaxed">
-                    {audience.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+      <GradientSection>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
+            Для кого TradeGate
+          </h2>
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+            Решение для всех участников процесса онлайн-заказов
+          </p>
         </div>
-      </section>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {targetAudience.map((audience, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center"
+            >
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white">
+                {audience.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{audience.title}</h3>
+              <p className="text-blue-100">{audience.description}</p>
+            </div>
+          ))}
+        </div>
+      </GradientSection>
+
+      <DeploymentOptions />
 
       {/* CTA Section */}
-      <section className="bg-off-white py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-primary rounded-2xl p-8 lg:p-12 text-white relative overflow-hidden">
-            {/* Background decorative elements */}
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
-            </div>
-
-            <div className="relative z-10 text-center">
-              <h3 className="text-3xl lg:text-4xl font-light mb-6 leading-tight">
-                Готовы подключить систему интеграции?
-              </h3>
-              <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto font-light">
-                Свяжитесь с нами для обсуждения интеграции TradeGate в вашу инфраструктуру
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-primary rounded-xl font-semibold hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-xl"
-              >
-                Обсудить проект
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <CTASection
+        title="Готовы подключить интеграцию?"
+        subtitle="Свяжитесь с нами для обсуждения интеграции TradeGate в вашу инфраструктуру"
+        primaryLink={{ href: '/contact', text: 'Обсудить проект' }}
+        secondaryLink={{ href: '/products/trade-frame', text: 'Платформа TradeFrame' }}
+      />
     </PageLayout>
   );
 }

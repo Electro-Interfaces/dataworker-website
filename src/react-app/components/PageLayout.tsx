@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Navigation from './Navigation';
-import ContactSection from './ContactSection';
+import Footer from './Footer';
+import CookieConsent from './CookieConsent';
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -10,10 +11,13 @@ const PageLayout = ({ children }: PageLayoutProps) => {
   return (
     <div className="relative">
       <Navigation />
-      <main className="pt-20 lg:pt-24">
-        {children}
-        <ContactSection />
-      </main>
+      <div className="pt-20 lg:pt-24">
+        <main>
+          {children}
+        </main>
+      </div>
+      <Footer />
+      <CookieConsent />
     </div>
   );
 };
