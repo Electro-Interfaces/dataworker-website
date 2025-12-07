@@ -44,18 +44,18 @@ export default function TradeTerminalPage() {
           </div>
           <div className="grid grid-cols-4 gap-2 mb-3">
             {[1,2,3,4].map(n => (
-              <div key={n} className={`${n===2 ? 'bg-white text-blue-600' : 'bg-white/20 text-white'} rounded-lg p-2 text-center font-bold text-sm`}>
+              <div key={n} className={`${n===2 ? 'bg-white text-navy-950' : 'bg-white/20 text-white'} rounded-lg p-2 text-center font-bold text-sm`}>
                 ТРК {n}
               </div>
             ))}
           </div>
           <div className="grid grid-cols-3 gap-2 mb-3">
-            <div className="bg-white/20 rounded-lg p-2 text-center"><div className="text-white font-bold text-sm">АИ-92</div><div className="text-blue-200 text-xs">₽54.90</div></div>
-            <div className="bg-white/30 border-2 border-white rounded-lg p-2 text-center"><div className="text-white font-bold text-sm">АИ-95</div><div className="text-blue-200 text-xs">₽59.90</div></div>
-            <div className="bg-white/20 rounded-lg p-2 text-center"><div className="text-white font-bold text-sm">ДТ</div><div className="text-blue-200 text-xs">₽62.50</div></div>
+            <div className="bg-white/20 rounded-lg p-2 text-center"><div className="text-white font-bold text-sm">АИ-92</div><div className="text-navy-200 text-xs">₽54.90</div></div>
+            <div className="bg-white/30 border-2 border-white rounded-lg p-2 text-center"><div className="text-white font-bold text-sm">АИ-95</div><div className="text-navy-200 text-xs">₽59.90</div></div>
+            <div className="bg-white/20 rounded-lg p-2 text-center"><div className="text-white font-bold text-sm">ДТ</div><div className="text-navy-200 text-xs">₽62.50</div></div>
           </div>
           <div className="bg-white/10 rounded-lg p-2 text-center mb-2">
-            <div className="text-blue-200 text-xs">Сумма</div>
+            <div className="text-navy-200 text-xs">Сумма</div>
             <div className="text-white font-bold text-xl">₽ 2,000</div>
           </div>
           <div className="bg-white rounded-lg py-2 text-center text-blue-700 font-bold text-sm">Далее →</div>
@@ -120,11 +120,11 @@ export default function TradeTerminalPage() {
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div className="bg-white/10 rounded-lg p-2 text-center">
-              <div className="text-blue-200 text-xs">Температура</div>
+              <div className="text-navy-200 text-xs">Температура</div>
               <div className="text-white font-bold">+18°C</div>
             </div>
             <div className="bg-white/10 rounded-lg p-2 text-center">
-              <div className="text-blue-200 text-xs">Плотность</div>
+              <div className="text-navy-200 text-xs">Плотность</div>
               <div className="text-white font-bold">0.755</div>
             </div>
           </div>
@@ -224,15 +224,15 @@ export default function TradeTerminalPage() {
           <div className="grid grid-cols-3 gap-2">
             <div className="bg-white/10 rounded-lg p-2 text-center">
               <div className="text-white font-bold text-sm">₽847K</div>
-              <div className="text-blue-200 text-[10px]">Выручка</div>
+              <div className="text-navy-200 text-[10px]">Выручка</div>
             </div>
             <div className="bg-white/10 rounded-lg p-2 text-center">
               <div className="text-white font-bold text-sm">1,247</div>
-              <div className="text-blue-200 text-[10px]">Транзакций</div>
+              <div className="text-navy-200 text-[10px]">Транзакций</div>
             </div>
             <div className="bg-white/10 rounded-lg p-2 text-center">
               <div className="text-white font-bold text-sm">14.2K</div>
-              <div className="text-blue-200 text-[10px]">Литров</div>
+              <div className="text-navy-200 text-[10px]">Литров</div>
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ export default function TradeTerminalPage() {
               </div>
               <div className="flex-1">
                 <div className="text-white text-xs font-bold">АЗС «Центральная»</div>
-                <div className="text-blue-200 text-[10px]">Терминал SelfPoint #12</div>
+                <div className="text-navy-200 text-[10px]">Терминал SelfPoint #12</div>
               </div>
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             </div>
@@ -293,7 +293,7 @@ export default function TradeTerminalPage() {
       description: 'Полностью автоматическая АЗС',
       fullDescription: 'Автоматическая заправочная станция без персонала. SelfPoint управляет всем: оплатой, ТРК и резервуарами. Работа 24/7 с минимальными затратами на обслуживание.',
       icon: <Building2 className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Без персонала 24/7', 'Контроль резервуаров', 'Удалённое управление', 'Минимальные затраты']
     },
     {
@@ -302,7 +302,7 @@ export default function TradeTerminalPage() {
       description: 'Рабочее место оператора АЗС',
       fullDescription: 'Классическая система управления для станций с персоналом. Кассовый терминал объединяет управление топливораздаточными колонками, приём оплаты и продажу товаров магазина.',
       icon: <Monitor className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Рабочее место кассира', 'Управление ТРК', 'Магазин и Кафе', 'Поддержка всех оплат']
     },
     {
@@ -311,7 +311,7 @@ export default function TradeTerminalPage() {
       description: 'Терминал как модуль к АЗС',
       fullDescription: 'SelfPoint устанавливается как дополнительный модуль к станции с оператором. Днём — два потока клиентов, ночью — автоматический режим без персонала.',
       icon: <Users className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Ускорение обслуживания', 'Круглосуточная работа', 'Экономия на сменах', 'Гибкое переключение']
     },
     {
@@ -320,7 +320,7 @@ export default function TradeTerminalPage() {
       description: 'Терминал для АГЗС',
       fullDescription: 'Специализированная конфигурация для автогазозаправочных станций. Учёт особенностей работы с СУГ: температурная коррекция, контроль давления.',
       icon: <Zap className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Учёт СУГ', 'Температурная коррекция', 'Контроль давления', 'Специальные датчики']
     },
     {
@@ -329,7 +329,7 @@ export default function TradeTerminalPage() {
       description: 'Корпоративная заправка',
       fullDescription: 'Закрытая заправочная станция на территории предприятия. Авторизация по корпоративным картам, учёт топлива по водителям и транспортным средствам.',
       icon: <Shield className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Корпоративные карты', 'Учёт по водителям', 'Лимиты топлива', 'Закрытый доступ']
     }
   ];
@@ -337,10 +337,10 @@ export default function TradeTerminalPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-terminal" />
@@ -349,21 +349,21 @@ export default function TradeTerminalPage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <div className="text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-                <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
                 <span className="text-xs font-semibold text-white tracking-wide uppercase">Front-Office Ecosystem</span>
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 leading-[0.9] tracking-tight">
-                Trade<span className="text-blue-200">Point</span>
+                Trade<span className="text-navy-200">Point</span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-blue-100 leading-relaxed mb-10 font-light max-w-xl">
+              <p className="text-lg lg:text-xl text-navy-100 leading-relaxed mb-10 font-light max-w-xl">
                 Единая экосистема управления продажами на АЗС.
                 <span className="block mt-2 opacity-80 text-base">Объединяет кассы FuelPoint, терминалы SelfPoint и контроллеры GasPoint.</span>
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="px-6 py-3 bg-white text-blue-900 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                <Link to="/contact" className="px-6 py-3 bg-white text-navy-950 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
                   Запросить демо
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -375,7 +375,7 @@ export default function TradeTerminalPage() {
                 {/* Terminal Illustration */}
                 <div className="relative">
                   {/* Glow effect */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl opacity-20 blur-2xl"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-navy-500 to-navy-600 rounded-3xl opacity-20 blur-2xl"></div>
 
                   {/* Terminal Body */}
                   <div className="relative w-[320px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl p-3 shadow-2xl border border-white/10">
@@ -401,21 +401,21 @@ export default function TradeTerminalPage() {
                       <div className="grid grid-cols-3 gap-2 mb-4">
                         <div className="bg-white/20 backdrop-blur rounded-lg p-2 text-center border border-white/30">
                           <div className="text-white font-bold text-sm">АИ-92</div>
-                          <div className="text-blue-200 text-[10px]">₽54.90</div>
+                          <div className="text-navy-200 text-[10px]">₽54.90</div>
                         </div>
                         <div className="bg-white/30 backdrop-blur rounded-lg p-2 text-center border-2 border-white">
                           <div className="text-white font-bold text-sm">АИ-95</div>
-                          <div className="text-blue-200 text-[10px]">₽59.90</div>
+                          <div className="text-navy-200 text-[10px]">₽59.90</div>
                         </div>
                         <div className="bg-white/20 backdrop-blur rounded-lg p-2 text-center border border-white/30">
                           <div className="text-white font-bold text-sm">ДТ</div>
-                          <div className="text-blue-200 text-[10px]">₽62.50</div>
+                          <div className="text-navy-200 text-[10px]">₽62.50</div>
                         </div>
                       </div>
 
                       {/* Amount Display */}
                       <div className="bg-white/10 backdrop-blur rounded-xl p-3 text-center mb-3">
-                        <div className="text-blue-200 text-[10px] uppercase tracking-wider mb-1">Сумма заправки</div>
+                        <div className="text-navy-200 text-[10px] uppercase tracking-wider mb-1">Сумма заправки</div>
                         <div className="text-white font-bold text-2xl">₽ 2,000</div>
                       </div>
 
@@ -446,8 +446,8 @@ export default function TradeTerminalPage() {
                 </div>
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-blue-600/90 to-blue-800/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
-                  <span className="text-blue-100/80 text-[10px] uppercase tracking-wider block mb-1">Режим работы</span>
+                <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-navy-700/90 to-navy-900/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
+                  <span className="text-navy-100/80 text-[10px] uppercase tracking-wider block mb-1">Режим работы</span>
                   <span className="text-white font-bold text-xl">24/7</span>
                 </div>
 
@@ -489,12 +489,12 @@ export default function TradeTerminalPage() {
                   onClick={() => setActiveModule(index)}
                   className={`flex items-center gap-3 p-3 lg:p-3.5 rounded-xl text-left transition-all duration-300 flex-shrink-0 lg:flex-shrink ${
                     activeModule === index
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
+                      ? 'bg-navy-600 text-white shadow-lg shadow-navy-500/25'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-100'
                   }`}
                 >
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    activeModule === index ? 'bg-white/20' : 'bg-blue-50 text-blue-600'
+                    activeModule === index ? 'bg-white/20' : 'bg-navy-50 text-navy-600'
                   }`}>
                     {module.icon}
                   </div>
@@ -510,7 +510,7 @@ export default function TradeTerminalPage() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl p-5 lg:p-6 shadow-lg border border-gray-100 h-full flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-200">
+                  <div className="w-12 h-12 bg-gradient-to-br from-navy-600 to-navy-700 rounded-xl flex items-center justify-center text-white shadow-md shadow-navy-200">
                     {systemModules[activeModule].icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">{systemModules[activeModule].title}</h3>
@@ -523,7 +523,7 @@ export default function TradeTerminalPage() {
                 <div className="grid sm:grid-cols-2 gap-2.5">
                   {systemModules[activeModule].features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-gray-50">
-                      <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-navy-500 flex-shrink-0" />
                       <span className="text-gray-700 text-sm font-medium">{feature}</span>
                     </div>
                   ))}
@@ -535,7 +535,7 @@ export default function TradeTerminalPage() {
                 {/* Module Visual */}
                 {systemModules[activeModule].visual && (
                   <div className="mt-auto group/img relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-navy-500 to-navy-600 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
                     <div className="relative transform group-hover/img:scale-[1.01] transition-transform duration-500">
                       {systemModules[activeModule].visual}
                     </div>
@@ -616,18 +616,18 @@ export default function TradeTerminalPage() {
       <DeploymentOptions />
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
             Готовы к автоматизации?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-navy-100 mb-8">
             Узнайте, как SelfPoint поможет вашему топливному бизнесу работать эффективнее
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-white text-navy-950 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Запросить демо
               <ArrowRight className="w-5 h-5" />

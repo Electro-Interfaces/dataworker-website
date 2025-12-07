@@ -76,7 +76,7 @@ export default function ProductDwStationPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-32 lg:pt-32 lg:pb-40 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-32 lg:pt-32 lg:pb-40 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent" />
@@ -321,7 +321,7 @@ export default function ProductDwStationPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-12 h-12 bg-blue-900/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-navy-950/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Settings className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-primary mb-2">Настройка цен</h3>
@@ -339,7 +339,7 @@ export default function ProductDwStationPage() {
 
             <Link
               to="/products/trade-frame"
-              className="inline-flex items-center px-8 py-4 bg-blue-900 text-white rounded-2xl font-semibold hover:bg-blue-900/90 hover:scale-105 transition-all duration-300 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-navy-950 text-white rounded-2xl font-semibold hover:bg-navy-950/90 hover:scale-105 transition-all duration-300 shadow-xl"
             >
               Узнать больше о TradeFrame
               <ArrowRight className="w-5 h-5 ml-3" />
@@ -359,7 +359,7 @@ export default function ProductDwStationPage() {
             </h2>
           </div>
 
-          <button className="inline-flex items-center px-16 py-8 bg-gradient-to-r from-accent to-blue-600 text-white rounded-3xl font-bold text-2xl xl:text-3xl premium-button shadow-2xl hover:scale-105 transition-all duration-700">
+          <button className="inline-flex items-center px-16 py-8 bg-gradient-to-r from-navy-600 to-navy-500 text-white rounded-3xl font-bold text-2xl xl:text-3xl premium-button shadow-2xl hover:scale-105 transition-all duration-700">
             Запросить демонстрацию платформы
           </button>
         </div>

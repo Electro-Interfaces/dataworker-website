@@ -32,7 +32,7 @@ export default function AdvantagesGrid({
           {title}
         </h2>
         {subtitle && (
-          <p className={`text-lg max-w-2xl mx-auto ${isDark ? 'text-blue-100' : 'text-gray-500'}`}>
+          <p className={`text-lg max-w-2xl mx-auto ${isDark ? 'text-navy-100' : 'text-gray-500'}`}>
             {subtitle}
           </p>
         )}
@@ -51,7 +51,7 @@ export default function AdvantagesGrid({
           >
             <div
               className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                isDark ? 'bg-white/20 text-white' : 'bg-blue-100 text-blue-600'
+                isDark ? 'bg-white/20 text-white' : 'bg-navy-100 text-navy-600'
               }`}
             >
               {advantage.icon}
@@ -59,7 +59,7 @@ export default function AdvantagesGrid({
             <h3 className={`text-lg font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {advantage.title}
             </h3>
-            <p className={isDark ? 'text-blue-100' : 'text-gray-600'}>
+            <p className={isDark ? 'text-navy-100' : 'text-gray-600'}>
               {advantage.description}
             </p>
           </div>

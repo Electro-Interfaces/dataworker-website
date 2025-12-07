@@ -16,15 +16,15 @@ export default function DeploymentOptions() {
         {/* Two deployment options */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Cloud option - recommended */}
-          <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200">
+          <div className="relative bg-gradient-to-br from-navy-50 to-navy-100 rounded-2xl p-8 border-2 border-navy-200">
             <div className="absolute -top-3 left-6">
-              <span className="px-3 py-1 bg-blue-600 text-white text-sm font-bold rounded-full">
+              <span className="px-3 py-1 bg-navy-600 text-white text-sm font-bold rounded-full">
                 Рекомендуем
               </span>
             </div>
 
             <div className="flex items-center gap-4 mb-6 mt-2">
-              <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+              <div className="w-14 h-14 bg-navy-600 rounded-xl flex items-center justify-center text-white shadow-lg">
                 <Cloud className="w-7 h-7" />
               </div>
               <div>
@@ -43,15 +43,15 @@ export default function DeploymentOptions() {
                 'Не нужны собственные IT-специалисты'
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-navy-600 rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="pt-4 border-t border-blue-200">
+            <div className="pt-4 border-t border-navy-200">
               <p className="text-sm text-gray-600">
-                <span className="font-semibold text-blue-700">Идеально для:</span> большинства сетей АЗС, которые хотят сфокусироваться на бизнесе, а не на IT
+                <span className="font-semibold text-navy-700">Идеально для:</span> большинства сетей АЗС, которые хотят сфокусироваться на бизнесе, а не на IT
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function DeploymentOptions() {
         </div>
 
         {/* Cloud benefits */}
-        <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 rounded-2xl p-8 lg:p-12">
+        <div className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 rounded-2xl p-8 lg:p-12">
           <div className="text-center mb-10">
             <h3 className="text-2xl font-bold text-white">
               Почему облако — выгодный выбор
@@ -123,7 +123,7 @@ export default function DeploymentOptions() {
                   {benefit.icon}
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">{benefit.title}</h4>
-                <p className="text-blue-200 text-sm">{benefit.description}</p>
+                <p className="text-navy-200 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>

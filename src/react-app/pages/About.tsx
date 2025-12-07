@@ -88,17 +88,17 @@ export default function AboutPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-about" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
             <span className="text-xs font-semibold text-white tracking-wide uppercase">О нас</span>
           </div>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
@@ -113,7 +113,7 @@ export default function AboutPage() {
             {stats.map((stat, index) => (
               <div key={index}>
                 <div className="text-3xl lg:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs lg:text-sm text-blue-200/60 uppercase tracking-wider font-medium">{stat.label}</div>
+                <div className="text-xs lg:text-sm text-navy-200/60 uppercase tracking-wider font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -137,19 +137,19 @@ export default function AboutPage() {
               <div className="space-y-4">
                 {['Собственные продукты и R&D', 'Опыт работы с крупным бизнесом', 'Полный цикл разработки'].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-navy-600 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 rounded-2xl p-8 lg:p-12">
-                <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
+              <div className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 rounded-2xl p-8 lg:p-12">
+                <div className="absolute -top-6 -right-6 w-32 h-32 bg-navy-500/20 rounded-full blur-2xl"></div>
                 <div className="relative z-10 text-center">
                   <div className="text-6xl lg:text-7xl font-bold text-white mb-4">20+</div>
-                  <div className="text-xl text-blue-100 mb-2">лет на рынке</div>
-                  <div className="text-blue-200/60">разработки ПО</div>
+                  <div className="text-xl text-navy-100 mb-2">лет на рынке</div>
+                  <div className="text-navy-200/60">разработки ПО</div>
                 </div>
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-xl flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-br from-navy-700 to-navy-800 rounded-xl flex items-center justify-center text-white shadow-lg flex-shrink-0">
                     {role.icon}
                   </div>
                   <div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                   {role.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-navy-50 text-navy-700 text-sm rounded-full font-medium"
                     >
                       {skill}
                     </span>
@@ -218,7 +218,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {teamPrinciples.map((principle, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-navy-700 to-navy-800 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white shadow-lg">
                     {principle.icon}
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3">
@@ -235,18 +235,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Готовы собрать команду для вашего проекта?
           </h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-navy-100 mb-8 max-w-2xl mx-auto">
             Расскажите о своей задаче, и мы подберем идеальный состав специалистов
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-blue-700 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-white text-navy-950 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Обсудить проект
               <ArrowRight className="w-5 h-5" />

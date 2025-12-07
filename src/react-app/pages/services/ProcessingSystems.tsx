@@ -25,38 +25,38 @@ export default function ProcessingSystemsPage() {
       description: 'Полный цикл управления топливными картами: эмиссия, авторизация транзакций, управление лимитами и отчетность.',
       icon: <CreditCard className="w-8 h-8 text-white" />,
       features: ['Онлайн-авторизация', 'Управление лимитами', 'Блокировка карт', 'FMS протоколы'],
-      gradient: 'from-cyan-500 to-blue-600'
+      gradient: 'from-navy-700 to-navy-900'
     },
     {
       title: 'Процессинг лояльности',
       description: 'Гибкий движок для начисления и списания бонусов. Поддержка сложных акций, уровней лояльности и персональных предложений.',
       icon: <Activity className="w-8 h-8 text-white" />,
       features: ['Real-time процессинг', 'Конструктор акций', 'Каскадные скидки', 'Сгораемые бонусы'],
-      gradient: 'from-teal-500 to-cyan-600'
+      gradient: 'from-navy-700 to-navy-900'
     },
     {
       title: 'Маршрутизация заказов',
       description: 'Интеллектуальная система распределения заказов между поставщиками, курьерами и точками выдачи.',
       icon: <Network className="w-8 h-8 text-white" />,
       features: ['Гео-распределение', 'Балансировка нагрузки', 'SLA-мониторинг', 'Трекинг статусов'],
-      gradient: 'from-blue-500 to-indigo-600'
+      gradient: 'from-navy-700 to-navy-900'
     },
     {
       title: 'Host-to-Host Интеграции',
       description: 'Защищенные шлюзы для прямого обмена данными с банками и ERP-системами партнеров.',
       icon: <Server className="w-8 h-8 text-white" />,
       features: ['ISO 8583', 'SOAP/REST API', 'Шифрование ГОСТ', 'Высокая отказоустойчивость'],
-      gradient: 'from-indigo-500 to-violet-600'
+      gradient: 'from-navy-700 to-navy-900'
     }
   ];
 
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-900 via-blue-950 to-indigo-950 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[80px]"></div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-navy-500/10 rounded-full blur-[100px] animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-navy-500/10 rounded-full blur-[80px]"></div>
         </div>
 
         <HexagonPattern id="hexagons-processing" />
@@ -64,20 +64,20 @@ export default function ProcessingSystemsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-              <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
               <span className="text-xs font-semibold text-white tracking-wide uppercase">Fintech Core</span>
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-              Процессинговые <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Системы</span>
+              Процессинговые <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-400 to-navy-300">Системы</span>
             </h1>
 
-            <p className="text-xl text-blue-100/90 leading-relaxed mb-10 font-light max-w-2xl">
+            <p className="text-xl text-navy-100/90 leading-relaxed mb-10 font-light max-w-2xl">
               Надежные решения для обработки транзакций. Биллинг, лояльность и интеграции, способные выдержать миллионы операций в секунду.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+              <Link to="/contact" className="px-8 py-4 bg-navy-950 text-white rounded-2xl font-bold text-lg shadow-xl shadow-navy-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-2">
                 Заказать систему
                 <ArrowRight className="w-5 h-5" />
               </Link>
@@ -105,7 +105,7 @@ export default function ProcessingSystemsPage() {
                   {item.icon}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-navy-600 transition-colors">
                   {item.title}
                 </h3>
                 
@@ -116,7 +116,7 @@ export default function ProcessingSystemsPage() {
                 <div className="grid grid-cols-2 gap-3">
                   {item.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className={`w-4 h-4 text-blue-500`} />
+                      <CheckCircle2 className={`w-4 h-4 text-navy-500`} />
                       <span className="text-sm text-gray-700 font-medium">{feature}</span>
                     </div>
                   ))}
@@ -203,7 +203,7 @@ export default function ProcessingSystemsPage() {
           </h2>
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+            className="inline-flex items-center px-8 py-4 bg-navy-950 text-white rounded-2xl font-bold text-lg hover:bg-navy-900 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
           >
             Связаться с экспертом
             <ArrowRight className="w-5 h-5 ml-2" />

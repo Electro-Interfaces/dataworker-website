@@ -94,7 +94,7 @@ const Navigation = () => {
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="DataWorker"
-              className="w-12 h-12 rounded-2xl shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300"
+              className="w-12 h-12 rounded-2xl shadow-lg shadow-navy-500/25 group-hover:scale-105 transition-transform duration-300"
             />
             <div className="flex flex-col overflow-hidden">
               <div className="relative h-7">
@@ -103,14 +103,14 @@ const Navigation = () => {
                     showTradeSuite ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'
                   }`}
                 >
-                  <span className="text-dark-gray">Data</span><span className="text-blue-800">Worker</span>
+                  <span className="text-dark-gray">Data</span><span className="text-navy-600">Worker</span>
                 </span>
                 <span
                   className={`font-display text-2xl font-bold tracking-tight leading-none absolute left-0 transition-all duration-500 ${
                     showTradeSuite ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
                 >
-                  <span className="text-dark-gray">Trade</span><span className="text-blue-800">Suite</span>
+                  <span className="text-dark-gray">Trade</span><span className="text-navy-600">Suite</span>
                 </span>
               </div>
               <span className="text-xs font-medium tracking-widest uppercase opacity-60 leading-none mt-1.5 text-medium-gray">
@@ -131,7 +131,7 @@ const Navigation = () => {
                   >
                     <button
                       onClick={() => handleDropdownToggle(item.dropdownKey)}
-                      className="inline-flex items-center px-5 py-3 text-base font-medium rounded-full transition-all duration-300 text-dark-gray hover:bg-primary/5 hover:text-primary"
+                      className="inline-flex items-center px-5 py-3 text-base font-medium rounded-full transition-all duration-300 text-navy-600 hover:bg-navy-50 hover:text-navy-800"
                     >
                       {item.name}
                       <ChevronDown className={`ml-2 w-4 h-4 transition-transform duration-300 ${
@@ -146,28 +146,28 @@ const Navigation = () => {
                           {/* Link to main section */}
                           <Link
                             to={item.href}
-                            className="flex items-center justify-between p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-200 mb-2"
+                            className="flex items-center justify-between p-4 rounded-xl bg-navy-50 hover:bg-navy-100 transition-colors duration-200 mb-2"
                             onClick={closeAllDropdowns}
                           >
-                            <span className="font-semibold text-primary">Все {item.name.toLowerCase()}</span>
-                            <ArrowRight className="w-5 h-5 text-primary" />
+                            <span className="font-semibold text-navy-600">Все {item.name.toLowerCase()}</span>
+                            <ArrowRight className="w-5 h-5 text-navy-600" />
                           </Link>
                           {item.dropdownItems?.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               to={dropdownItem.href}
-                              className="flex items-start p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200 group/item"
+                              className="flex items-start p-4 rounded-xl hover:bg-navy-50 transition-colors duration-200 group/item"
                               onClick={closeAllDropdowns}
                             >
                               <div className="flex-1">
-                                <div className="font-semibold text-dark-gray text-base group-hover/item:text-primary transition-colors">
+                                <div className="font-semibold text-navy-700 text-base group-hover/item:text-navy-600 transition-colors">
                                   {dropdownItem.name}
                                 </div>
                                 <div className="text-medium-gray text-sm mt-1 leading-relaxed">
                                   {dropdownItem.description}
                                 </div>
                               </div>
-                              <ArrowRight className="w-5 h-5 text-gray-300 group-hover/item:text-primary opacity-0 group-hover/item:opacity-100 transition-all transform -translate-x-2 group-hover/item:translate-x-0 mt-1" />
+                              <ArrowRight className="w-5 h-5 text-gray-300 group-hover/item:text-navy-600 opacity-0 group-hover/item:opacity-100 transition-all transform -translate-x-2 group-hover/item:translate-x-0 mt-1" />
                             </Link>
                           ))}
                         </div>
@@ -177,7 +177,7 @@ const Navigation = () => {
                 ) : (
                   <Link
                     to={item.href}
-                    className="px-5 py-3 inline-block text-base font-medium rounded-full transition-all duration-300 text-dark-gray hover:bg-primary/5 hover:text-primary"
+                    className="px-5 py-3 inline-block text-base font-medium rounded-full transition-all duration-300 text-navy-600 hover:bg-navy-50 hover:text-navy-800"
                   >
                     {item.name}
                   </Link>
@@ -190,7 +190,7 @@ const Navigation = () => {
           <div className="hidden lg:block pl-8">
             <Link
               to="/contact"
-              className="px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 bg-primary text-white hover:bg-primary-dark"
+              className="px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 bg-navy-600 text-white hover:bg-navy-700"
             >
               Связаться с нами
             </Link>
@@ -223,7 +223,7 @@ const Navigation = () => {
                 <>
                   <Link
                     to={item.href}
-                    className="block font-display font-bold text-dark-gray text-xl mb-4 hover:text-primary transition-colors"
+                    className="block font-display font-bold text-navy-600 text-xl mb-4 hover:text-navy-800 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -233,7 +233,7 @@ const Navigation = () => {
                       <Link
                         key={dropdownItem.name}
                         to={dropdownItem.href}
-                        className="block text-medium-gray hover:text-primary transition-colors text-lg py-1"
+                        className="block text-navy-500 hover:text-navy-700 transition-colors text-lg py-1"
                         onClick={() => setIsOpen(false)}
                       >
                         {dropdownItem.name}
@@ -244,7 +244,7 @@ const Navigation = () => {
               ) : (
                 <Link
                   to={item.href}
-                  className="block font-display font-bold text-dark-gray text-xl hover:text-primary transition-colors"
+                  className="block font-display font-bold text-navy-600 text-xl hover:text-navy-800 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -255,7 +255,7 @@ const Navigation = () => {
           <div className="pt-6">
             <Link
               to="/contact"
-              className="block w-full text-center py-5 bg-primary text-white rounded-2xl font-semibold text-xl shadow-lg active:scale-95 transition-transform"
+              className="block w-full text-center py-5 bg-navy-600 text-white rounded-2xl font-semibold text-xl shadow-lg active:scale-95 transition-transform hover:bg-navy-700"
               onClick={() => setIsOpen(false)}
             >
               Обсудить проект

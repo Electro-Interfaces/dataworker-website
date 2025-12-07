@@ -108,7 +108,7 @@ export default function TradeFramePage() {
       description: 'Классическая АЗС с оператором',
       fullDescription: 'Традиционная автозаправочная станция с операторским обслуживанием. Полный контроль через TradeFrame с интеграцией кассового ПО.',
       icon: <Fuel className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Операторский режим', 'Кассовое ПО STS POS', 'Магазин и кафе', 'Любые виды топлива']
     },
     {
@@ -135,7 +135,7 @@ export default function TradeFramePage() {
           <line x1="28" y1="7" x2="28" y2="8" stroke="currentColor" strokeWidth="1.5"/>
         </svg>
       ),
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Без персонала 24/7', 'Удалённое управление', 'Видеонаблюдение', 'Автоинкассация']
     },
     {
@@ -144,7 +144,7 @@ export default function TradeFramePage() {
       description: 'Гибридный режим работы',
       fullDescription: 'SelfPoint устанавливается как дополнительный модуль к станции с оператором. Днём — два потока клиентов, ночью — автоматический режим без персонала.',
       icon: <Smartphone className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Ускорение обслуживания', 'Круглосуточная работа', 'Экономия на сменах', 'Гибкое переключение']
     },
     {
@@ -153,7 +153,7 @@ export default function TradeFramePage() {
       description: 'АГЗС для сжиженного газа',
       fullDescription: 'Автогазозаправочная станция для СУГ (пропан-бутан). Специализированный учёт и контроль заправки газового топлива.',
       icon: <Zap className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Учёт СУГ', 'Контроль давления', 'Температурная коррекция', 'Специальные датчики']
     },
     {
@@ -162,7 +162,7 @@ export default function TradeFramePage() {
       description: 'Корпоративная заправка',
       fullDescription: 'Закрытая заправочная станция на территории предприятия. Авторизация по корпоративным картам, учёт топлива по водителям и транспортным средствам.',
       icon: <Shield className="w-8 h-8" />,
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-700 to-navy-800',
       features: ['Корпоративные карты', 'Учёт по водителям', 'Лимиты топлива', 'Закрытый доступ']
     }
   ];
@@ -171,10 +171,10 @@ export default function TradeFramePage() {
   return (
     <PageLayout>
       {/* Hero Section - Keep existing */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-frame" />
@@ -188,16 +188,16 @@ export default function TradeFramePage() {
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 leading-[0.9] tracking-tight">
-                Trade<span className="text-blue-200">Frame</span>
+                Trade<span className="text-navy-200">Frame</span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-blue-100 leading-relaxed mb-10 font-light max-w-xl">
+              <p className="text-lg lg:text-xl text-navy-100 leading-relaxed mb-10 font-light max-w-xl">
                 Облачная экосистема для управления сетью торговых точек.
                 <span className="block mt-2 opacity-80 text-base">Контроль, аналитика и автоматизация в одном окне.</span>
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="px-6 py-3 bg-white text-blue-900 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                <Link to="/contact" className="px-6 py-3 bg-white text-navy-950 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
                   Запросить демо
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -269,12 +269,12 @@ export default function TradeFramePage() {
                   onClick={() => setActiveModule(index)}
                   className={`flex items-center gap-3 p-3 lg:p-3.5 rounded-xl text-left transition-all duration-300 flex-shrink-0 lg:flex-shrink ${
                     activeModule === index
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
+                      ? 'bg-navy-600 text-white shadow-lg shadow-navy-500/25'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-100'
                   }`}
                 >
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    activeModule === index ? 'bg-white/20' : 'bg-blue-50 text-blue-600'
+                    activeModule === index ? 'bg-white/20' : 'bg-navy-50 text-navy-600'
                   }`}>
                     {module.icon}
                   </div>
@@ -291,7 +291,7 @@ export default function TradeFramePage() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl p-5 lg:p-6 shadow-lg border border-gray-100 h-full flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-200">
+                  <div className="w-12 h-12 bg-gradient-to-br from-navy-600 to-navy-700 rounded-xl flex items-center justify-center text-white shadow-md shadow-navy-200">
                     {systemModules[activeModule].icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">{systemModules[activeModule].title}</h3>
@@ -304,7 +304,7 @@ export default function TradeFramePage() {
                 <div className="grid sm:grid-cols-2 gap-2.5">
                   {systemModules[activeModule].features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-gray-50">
-                      <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-navy-500 flex-shrink-0" />
                       <span className="text-gray-700 text-sm font-medium">{feature}</span>
                     </div>
                   ))}
@@ -316,7 +316,7 @@ export default function TradeFramePage() {
                 {/* Module Image(s) */}
                 {systemModules[activeModule].image && (
                   <div className="mt-auto group/img relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-navy-500 to-navy-600 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
                     <div className="relative rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-gray-200 flex justify-center">
                       <img
                         src={`${import.meta.env.BASE_URL}${systemModules[activeModule].image}`}
@@ -329,7 +329,7 @@ export default function TradeFramePage() {
                 )}
                 {systemModules[activeModule].images && (
                   <div className="mt-auto group/img relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-navy-500 to-navy-600 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
                     <div className="relative rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-gray-100 flex justify-center items-end gap-4 p-4">
                       {systemModules[activeModule].images?.map((img, idx) => (
                         <img
@@ -418,18 +418,18 @@ export default function TradeFramePage() {
       <DeploymentOptions />
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
             Готовы автоматизировать вашу сеть?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-navy-100 mb-8">
             Получите персональную демонстрацию платформы TradeFrame
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-white text-navy-950 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Запросить демо
               <ArrowRight className="w-5 h-5" />

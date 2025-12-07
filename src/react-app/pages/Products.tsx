@@ -78,18 +78,18 @@ export default function ProductsPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-24 lg:py-32 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-products" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
             <span className="text-xs font-semibold text-white tracking-wide uppercase">5 продуктов</span>
           </div>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
@@ -116,13 +116,13 @@ export default function ProductsPage() {
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="relative group">
                     {/* Glow effect */}
-                    <div className="absolute -inset-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div className="absolute -inset-3 bg-gradient-to-r from-navy-600 to-navy-700 rounded-3xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
 
                     {/* Main container */}
-                    <div className="relative bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 rounded-2xl p-6 overflow-hidden min-h-[280px] flex flex-col justify-center">
+                    <div className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 rounded-2xl p-6 overflow-hidden min-h-[280px] flex flex-col justify-center">
                       {/* Background decorations */}
-                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/10 rounded-full blur-2xl"></div>
-                      <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl"></div>
+                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-navy-400/10 rounded-full blur-2xl"></div>
+                      <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-navy-500/10 rounded-full blur-2xl"></div>
 
                       {product.image ? (
                         /* Screenshot */
@@ -137,11 +137,11 @@ export default function ProductsPage() {
                       ) : (
                         /* Icon-based visual */
                         <div className="text-center py-8">
-                          <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-xl">
+                          <div className="w-20 h-20 bg-gradient-to-br from-navy-600 to-navy-700 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-xl">
                             {product.icon}
                           </div>
                           <div className="text-4xl font-bold text-white mb-2">{product.stats.value}</div>
-                          <div className="text-sm text-blue-200/80 uppercase tracking-wider">{product.stats.label}</div>
+                          <div className="text-sm text-navy-200/80 uppercase tracking-wider">{product.stats.label}</div>
                         </div>
                       )}
 
@@ -149,7 +149,7 @@ export default function ProductsPage() {
                       {product.image && (
                         <div className="absolute bottom-4 right-4 p-3 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl border border-gray-100">
                           <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-0.5">{product.stats.label}</div>
-                          <div className="text-lg font-bold text-blue-600">{product.stats.value}</div>
+                          <div className="text-lg font-bold text-navy-600">{product.stats.value}</div>
                         </div>
                       )}
                     </div>
@@ -158,7 +158,7 @@ export default function ProductsPage() {
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                  <div className="text-sm font-bold text-blue-600 uppercase tracking-wide mb-3">
+                  <div className="text-sm font-bold text-navy-600 uppercase tracking-wide mb-3">
                     {product.category}
                   </div>
                   <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
@@ -173,7 +173,7 @@ export default function ProductsPage() {
                     <div className="grid sm:grid-cols-2 gap-3">
                       {product.features.map((feature) => (
                         <div key={feature} className="flex items-center bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-navy-600 rounded-full mr-3 flex-shrink-0"></div>
                           <span className="text-gray-700 text-sm">{feature}</span>
                         </div>
                       ))}
@@ -183,7 +183,7 @@ export default function ProductsPage() {
                   {/* CTA */}
                   <Link
                     to={product.href}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-700 to-indigo-800 text-white rounded-xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center px-6 py-3 bg-navy-950 text-white rounded-xl font-semibold hover:bg-navy-900 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Подробнее о {product.name}
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -210,14 +210,14 @@ export default function ProductsPage() {
           {/* Two deployment options */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* Cloud option - recommended */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border-2 border-blue-200">
+            <div className="relative bg-gradient-to-br from-navy-50 to-navy-100 rounded-2xl p-8 border-2 border-navy-200">
               <div className="absolute -top-3 left-6">
-                <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full uppercase tracking-wide">
+                <span className="px-3 py-1 bg-navy-600 text-white text-xs font-bold rounded-full uppercase tracking-wide">
                   Рекомендуем
                 </span>
               </div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+                <div className="w-14 h-14 bg-navy-600 rounded-xl flex items-center justify-center text-white">
                   <Cloud className="w-7 h-7" />
                 </div>
                 <div>
@@ -235,7 +235,7 @@ export default function ProductsPage() {
                   'Не нужны собственные IT-специалисты'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-5 h-5 bg-navy-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
@@ -244,7 +244,7 @@ export default function ProductsPage() {
                   </li>
                 ))}
               </ul>
-              <div className="pt-4 border-t border-blue-200">
+              <div className="pt-4 border-t border-navy-200">
                 <p className="text-sm text-gray-600">
                   <span className="font-semibold text-gray-900">Идеально для:</span> большинства сетей АЗС, которые хотят сфокусироваться на бизнесе, а не на IT
                 </p>
@@ -290,7 +290,7 @@ export default function ProductsPage() {
           </div>
 
           {/* Cloud benefits */}
-          <div className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 rounded-2xl p-8 lg:p-12">
+          <div className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 rounded-2xl p-8 lg:p-12">
             <div className="text-center mb-10">
               <h3 className="text-2xl font-bold text-white">
                 Почему облако — выгодный выбор
@@ -320,7 +320,7 @@ export default function ProductsPage() {
                     {benefit.icon}
                   </div>
                   <h4 className="font-bold text-white mb-2">{benefit.title}</h4>
-                  <p className="text-blue-200 text-sm">{benefit.description}</p>
+                  <p className="text-navy-200 text-sm">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -328,25 +328,25 @@ export default function ProductsPage() {
 
           <div className="mt-8 text-center">
             <p className="text-gray-500 text-sm">
-              Не уверены какой вариант подходит? <Link to="/contact" className="text-blue-600 font-medium hover:underline">Проконсультируем бесплатно</Link>
+              Не уверены какой вариант подходит? <Link to="/contact" className="text-navy-600 font-medium hover:underline">Проконсультируем бесплатно</Link>
             </p>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Готовы начать?
           </h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-navy-100 mb-8 max-w-2xl mx-auto">
             Расскажем подробнее о продуктах, рассчитаем стоимость и проведём демонстрацию
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-blue-700 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-white text-navy-950 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Получить консультацию
               <ArrowRight className="w-5 h-5" />

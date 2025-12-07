@@ -80,17 +80,17 @@ export default function ContactPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-contact" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
             <span className="text-xs font-semibold text-white tracking-wide uppercase">Контакты</span>
           </div>
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
@@ -124,7 +124,7 @@ export default function ContactPage() {
                     href={contact.href}
                     className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-navy-700 to-navy-800 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
                       {contact.icon}
                     </div>
                     <div>
@@ -136,9 +136,9 @@ export default function ContactPage() {
               </div>
 
               {/* Working Hours */}
-              <div className="bg-gradient-to-br from-blue-700 to-indigo-800 rounded-2xl p-6 text-white">
+              <div className="bg-gradient-to-br from-navy-700 to-navy-800 rounded-2xl p-6 text-white">
                 <h3 className="font-bold text-lg mb-3">Время работы</h3>
-                <div className="space-y-2 text-blue-100">
+                <div className="space-y-2 text-navy-100">
                   <div className="flex justify-between">
                     <span>Пн — Пт</span>
                     <span className="font-medium text-white">9:00 — 18:00</span>
@@ -176,7 +176,7 @@ export default function ContactPage() {
                     <p className="text-gray-500 mb-6">Мы свяжемся с вами в ближайшее время</p>
                     <button
                       onClick={() => setIsSubmitted(false)}
-                      className="text-blue-600 font-medium hover:underline"
+                      className="text-navy-600 font-medium hover:underline"
                     >
                       Отправить ещё одно сообщение
                     </button>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                           type="text"
                           name="name"
                           required
-                          className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20 transition-all"
                           placeholder="Иван Иванов"
                         />
                       </div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                           type="email"
                           name="email"
                           required
-                          className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                          className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20 transition-all"
                           placeholder="ivan@company.ru"
                         />
                       </div>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                       <input
                         type="text"
                         name="company"
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20 transition-all"
                         placeholder="Название компании"
                       />
                     </div>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       </label>
                       <select
                         name="subject"
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 border border-gray-200 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20 transition-all"
                       >
                         <option>Консультация по продуктам TradeSuite</option>
                         <option>Заказная разработка</option>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                         name="message"
                         rows={5}
                         required
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                        className="w-full px-4 py-3 bg-gray-50 rounded-xl text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-500/20 transition-all resize-none"
                         placeholder="Опишите вашу задачу или вопрос..."
                       ></textarea>
                     </div>
@@ -261,7 +261,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 bg-gradient-to-r from-blue-700 to-indigo-800 text-white hover:shadow-xl hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg"
+                      className="w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 bg-navy-950 text-white hover:bg-navy-900 hover:shadow-xl hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg"
                     >
                       {isSubmitting ? (
                         <>
@@ -284,17 +284,17 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Хотите узнать больше?
           </h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-navy-100 mb-8 max-w-2xl mx-auto">
             Напишите нам для демонстрации продуктов TradeSuite
           </p>
           <a
             href="mailto:info@dataworker.ru"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-navy-950 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <Mail className="w-5 h-5" />
             info@dataworker.ru

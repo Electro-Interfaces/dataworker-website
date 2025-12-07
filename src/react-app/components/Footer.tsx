@@ -20,7 +20,7 @@ const Footer = () => {
               />
               <span className="font-bold text-xl">
                 <span className="text-white">Data</span>
-                <span className="text-blue-400">Worker</span>
+                <span className="text-navy-400">Worker</span>
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -97,7 +97,7 @@ const Footer = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center px-5 py-2.5 bg-blue-600 text-white rounded-xl font-semibold text-sm hover:bg-blue-700 transition-colors cursor-pointer"
+              className="inline-flex items-center px-5 py-2.5 bg-navy-600 text-white rounded-xl font-semibold text-sm hover:bg-navy-700 transition-colors cursor-pointer"
             >
               Написать нам
             </Link>

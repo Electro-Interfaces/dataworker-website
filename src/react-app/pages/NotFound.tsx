@@ -10,11 +10,11 @@ export default function NotFoundPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 flex items-center justify-center relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
       </div>
 
       {/* Hexagon Pattern */}
@@ -43,7 +43,7 @@ export default function NotFoundPage() {
         <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">
           Страница не найдена
         </h1>
-        <p className="text-lg lg:text-xl text-blue-100/80 mb-10 max-w-md mx-auto">
+        <p className="text-lg lg:text-xl text-navy-100/80 mb-10 max-w-md mx-auto">
           Запрашиваемая страница не существует или была перемещена
         </p>
 
@@ -51,7 +51,7 @@ export default function NotFoundPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-700 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-navy-700 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <Home className="w-5 h-5" />
             На главную
@@ -67,7 +67,7 @@ export default function NotFoundPage() {
 
         {/* Quick Links */}
         <div className="mt-16 pt-8 border-t border-white/10">
-          <p className="text-blue-200/60 text-sm mb-4">Возможно, вы искали:</p>
+          <p className="text-navy-200/60 text-sm mb-4">Возможно, вы искали:</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/products" className="px-4 py-2 bg-white/10 text-white/80 rounded-lg text-sm hover:bg-white/20 transition-colors">
               Продукты

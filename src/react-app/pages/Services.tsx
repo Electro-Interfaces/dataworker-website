@@ -104,10 +104,10 @@ export default function ServicesPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-services" />
@@ -117,7 +117,7 @@ export default function ServicesPage() {
             {/* Left - Text */}
             <div className="text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-                <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
                 <span className="text-xs font-semibold text-white tracking-wide uppercase">Custom Development</span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
@@ -132,7 +132,7 @@ export default function ServicesPage() {
             <div className="hidden lg:flex items-center justify-center">
               <div className="relative w-full max-w-md">
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl opacity-20 blur-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-500 to-navy-600 rounded-3xl opacity-20 blur-2xl"></div>
 
                 {/* Main visual - Code/Development themed */}
                 <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-xl rounded-3xl p-6 border border-white/10 shadow-2xl">
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                 <div className="absolute -top-4 -right-4 p-3 bg-white/95 backdrop-blur-xl rounded-xl shadow-xl animate-bounce" style={{animationDuration: '3s'}}>
                   <span className="text-gray-900 font-bold text-sm">Full Cycle</span>
                 </div>
-                <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl shadow-xl">
+                <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-gradient-to-r from-navy-600 to-navy-700 rounded-xl shadow-xl">
                   <span className="text-white font-bold text-sm">24/7 Support</span>
                 </div>
               </div>
@@ -206,18 +206,18 @@ export default function ServicesPage() {
                 className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 overflow-hidden hover:-translate-y-1"
               >
                 {/* Background glow */}
-                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-600 to-indigo-600 opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity"></div>
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-navy-600 to-navy-700 opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity"></div>
 
                 <div className="relative z-10">
                   <div className="flex items-start gap-5 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-700 to-indigo-800 rounded-2xl flex items-center justify-center text-white shadow-lg flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 bg-gradient-to-br from-navy-700 to-navy-800 rounded-2xl flex items-center justify-center text-white shadow-lg flex-shrink-0 group-hover:scale-105 transition-transform">
                       {service.icon}
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-blue-600 uppercase tracking-wide mb-1">
+                      <div className="text-sm font-bold text-navy-600 uppercase tracking-wide mb-1">
                         {service.subtitle}
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors">
+                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-navy-700 transition-colors">
                         {service.name}
                       </h3>
                     </div>
@@ -230,13 +230,13 @@ export default function ServicesPage() {
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature) => (
                       <div key={feature} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-navy-600 rounded-full flex-shrink-0"></div>
                         <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
+                  <div className="flex items-center text-navy-600 font-semibold group-hover:gap-2 transition-all">
                     Подробнее
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -248,13 +248,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Advantages Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Почему выбирают нас
             </h2>
-            <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
               Преимущества работы с командой DataWorker
             </p>
           </div>
@@ -271,7 +271,7 @@ export default function ServicesPage() {
                 <h3 className="text-lg font-bold text-white mb-2">
                   {advantage.title}
                 </h3>
-                <p className="text-blue-100 text-sm leading-relaxed">
+                <p className="text-navy-100 text-sm leading-relaxed">
                   {advantage.description}
                 </p>
               </div>
@@ -292,7 +292,7 @@ export default function ServicesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-blue-700 to-indigo-800 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-navy-950 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-navy-900 hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Связаться с нами
               <ArrowRight className="w-5 h-5" />

@@ -37,7 +37,7 @@ export default function CTASection({
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             to={primaryLink.href}
-            className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            className="px-8 py-4 bg-navy-950 text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:bg-navy-900 hover:scale-105 transition-all duration-300 flex items-center gap-2"
           >
             {primaryLink.text}
             <ArrowRight className="w-5 h-5" />

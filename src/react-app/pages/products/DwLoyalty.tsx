@@ -122,29 +122,29 @@ export default function DwLoyaltyPage() {
       icon: <Gift className="w-8 h-8" />,
       title: 'Бонусная программа',
       description: 'Накопление баллов за покупки с возможностью оплаты ими до 100% следующих покупок',
-      gradient: 'from-blue-700 to-indigo-800'
+      gradient: 'from-navy-700 to-navy-800'
     },
     {
       icon: <Percent className="w-8 h-8" />,
       title: 'Накопительные скидки',
       description: 'Прогрессивные скидки в зависимости от суммы покупок за период',
-      gradient: 'from-blue-700 to-indigo-800'
+      gradient: 'from-navy-700 to-navy-800'
     },
     {
       icon: <CreditCard className="w-8 h-8" />,
       title: 'Кэшбэк',
       description: 'Возврат процента от покупок на бонусный счёт или карту',
-      gradient: 'from-blue-700 to-indigo-800'
+      gradient: 'from-navy-700 to-navy-800'
     }
   ];
 
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-loyalty" />
@@ -158,16 +158,16 @@ export default function DwLoyaltyPage() {
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 leading-[0.9] tracking-tight">
-                Trade<span className="text-blue-200">Bonus</span>
+                Trade<span className="text-navy-200">Bonus</span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-blue-100 leading-relaxed mb-10 font-light max-w-xl">
+              <p className="text-lg lg:text-xl text-navy-100 leading-relaxed mb-10 font-light max-w-xl">
                 Платформа управления лояльностью.
                 <span className="block mt-2 opacity-80 text-base">Бонусы, акции и персональные предложения для ваших клиентов.</span>
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="px-6 py-3 bg-white text-blue-900 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                <Link to="/contact" className="px-6 py-3 bg-white text-navy-950 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
                   Запросить демо
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -178,7 +178,7 @@ export default function DwLoyaltyPage() {
               <div className="relative transform hover:scale-105 transition-all duration-500">
                 <div className="relative rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl p-6">
                   {/* Loyalty Card Illustration */}
-                  <div className="w-[340px] h-[200px] bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-5 shadow-2xl relative overflow-hidden">
+                  <div className="w-[340px] h-[200px] bg-gradient-to-br from-navy-600 to-navy-700 rounded-2xl p-5 shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full blur-2xl"></div>
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center gap-2">
@@ -205,8 +205,8 @@ export default function DwLoyaltyPage() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-blue-600/90 to-blue-800/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
-                  <span className="text-blue-100/80 text-[10px] uppercase tracking-wider block mb-1">Участников</span>
+                <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-navy-600/90 to-navy-800/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
+                  <span className="text-navy-100/80 text-[10px] uppercase tracking-wider block mb-1">Участников</span>
                   <span className="text-white font-bold text-xl">43,293</span>
                 </div>
               </div>
@@ -242,12 +242,12 @@ export default function DwLoyaltyPage() {
                   onClick={() => setActiveModule(index)}
                   className={`flex items-center gap-3 p-3 lg:p-3.5 rounded-xl text-left transition-all duration-300 flex-shrink-0 lg:flex-shrink ${
                     activeModule === index
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
+                      ? 'bg-navy-600 text-white shadow-lg shadow-navy-500/25'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-100'
                   }`}
                 >
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    activeModule === index ? 'bg-white/20' : 'bg-blue-50 text-blue-600'
+                    activeModule === index ? 'bg-white/20' : 'bg-navy-50 text-navy-600'
                   }`}>
                     {module.icon}
                   </div>
@@ -263,7 +263,7 @@ export default function DwLoyaltyPage() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl p-5 lg:p-6 shadow-lg border border-gray-100 min-h-[600px] flex flex-col">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-200">
+                  <div className="w-12 h-12 bg-gradient-to-br from-navy-600 to-navy-700 rounded-xl flex items-center justify-center text-white shadow-md shadow-navy-200">
                     {systemModules[activeModule].icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">{systemModules[activeModule].title}</h3>
@@ -276,7 +276,7 @@ export default function DwLoyaltyPage() {
                 <div className="grid sm:grid-cols-2 gap-2.5">
                   {systemModules[activeModule].features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-gray-50">
-                      <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-navy-500 flex-shrink-0" />
                       <span className="text-gray-700 text-sm font-medium">{feature}</span>
                     </div>
                   ))}
@@ -288,7 +288,7 @@ export default function DwLoyaltyPage() {
                 {/* Module Illustration */}
                 {systemModules[activeModule].illustration && (
                   <div className="mt-auto group/img relative">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-navy-500 to-navy-600 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
                     <div className="relative rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
                       {systemModules[activeModule].illustration}
                     </div>
@@ -330,13 +330,13 @@ export default function DwLoyaltyPage() {
       </section>
 
       {/* Advantages Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
               Преимущества TradeBonus
             </h2>
-            <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+            <p className="text-lg text-navy-100 max-w-2xl mx-auto">
               Почему компании выбирают нашу платформу лояльности
             </p>
           </div>
@@ -351,7 +351,7 @@ export default function DwLoyaltyPage() {
                   {advantage.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{advantage.title}</h3>
-                <p className="text-blue-100">{advantage.description}</p>
+                <p className="text-navy-100">{advantage.description}</p>
               </div>
             ))}
           </div>
@@ -372,7 +372,7 @@ export default function DwLoyaltyPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-navy-600 text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               Запросить демо
               <ArrowRight className="w-5 h-5" />

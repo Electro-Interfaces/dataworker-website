@@ -30,28 +30,30 @@ import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
 // Hero Card Illustration
 const HeroIllustration = () => (
-  <div className="relative rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl p-6">
-    <div className="w-[340px] h-[200px] bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-5 shadow-2xl relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full blur-2xl"></div>
-      <div className="flex justify-between items-start mb-6">
-        <div className="w-11 h-9 bg-gradient-to-br from-amber-300 to-amber-500 rounded-lg"></div>
-        <CreditCard className="w-7 h-7 text-white/60" />
-      </div>
-      <div className="text-white/80 text-base tracking-[0.25em] mb-3">•••• •••• •••• 4589</div>
-      <div className="flex justify-between items-end">
-        <div>
-          <div className="text-white/60 text-[10px] uppercase">Держатель</div>
-          <div className="text-white text-sm font-medium">ООО "Транс Логистик"</div>
+  <div className="relative pl-8 pb-6">
+    <div className="rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm shadow-2xl p-6">
+      <div className="w-[340px] h-[200px] bg-gradient-to-br from-navy-700 to-navy-900 rounded-2xl p-5 shadow-2xl relative overflow-hidden border border-white/10">
+        <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full blur-2xl"></div>
+        <div className="flex justify-between items-start mb-6">
+          <div className="w-11 h-9 bg-gradient-to-br from-amber-300 to-amber-500 rounded-lg"></div>
+          <CreditCard className="w-7 h-7 text-white/60" />
         </div>
-        <div className="text-right">
-          <div className="text-white/60 text-[10px] uppercase">Срок</div>
-          <div className="text-white text-sm font-medium">12/27</div>
+        <div className="text-white/80 text-base tracking-[0.25em] mb-3">•••• •••• •••• 4589</div>
+        <div className="flex justify-between items-end">
+          <div>
+            <div className="text-white/60 text-[10px] uppercase">Держатель</div>
+            <div className="text-white text-sm font-medium">ООО "Транс Логистик"</div>
+          </div>
+          <div className="text-right">
+            <div className="text-white/60 text-[10px] uppercase">Срок</div>
+            <div className="text-white text-sm font-medium">12/27</div>
+          </div>
         </div>
       </div>
     </div>
     {/* Stats badge */}
-    <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-blue-600/90 to-blue-800/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
-      <span className="text-blue-100/80 text-[10px] uppercase tracking-wider block mb-1">Активных карт</span>
+    <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-r from-navy-800/95 to-navy-950/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
+      <span className="text-navy-200 text-[10px] uppercase tracking-wider block mb-1">Активных карт</span>
       <span className="text-white font-bold text-xl">12,847</span>
     </div>
   </div>
@@ -204,7 +206,7 @@ export default function TradeCorpPage() {
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
             Сценарии работы с картами
           </h2>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+          <p className="text-lg text-navy-100 max-w-2xl mx-auto">
             Три модели интеграции для разных бизнес-задач
           </p>
         </div>
@@ -217,7 +219,7 @@ export default function TradeCorpPage() {
               onClick={() => setActiveScenario(index)}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 activeScenario === index
-                  ? 'bg-white text-blue-600 shadow-lg'
+                  ? 'bg-white text-navy-600 shadow-lg'
                   : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
               }`}
             >
@@ -234,7 +236,7 @@ export default function TradeCorpPage() {
                 {cardScenarios[activeScenario].icon}
               </div>
               <div>
-                <div className="text-blue-200 text-sm font-medium uppercase tracking-wider mb-1">
+                <div className="text-navy-200 text-sm font-medium uppercase tracking-wider mb-1">
                   {cardScenarios[activeScenario].subtitle}
                 </div>
                 <h3 className="text-3xl lg:text-4xl font-bold text-white">
@@ -243,21 +245,21 @@ export default function TradeCorpPage() {
               </div>
             </div>
 
-            <p className="text-xl text-blue-100 leading-relaxed mb-8">
+            <p className="text-xl text-navy-100 leading-relaxed mb-8">
               {cardScenarios[activeScenario].description}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {cardScenarios[activeScenario].features.map((feature, i) => (
                 <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl p-4">
-                  <CheckCircle2 className="w-5 h-5 text-blue-200 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-navy-200 flex-shrink-0" />
                   <span className="text-white font-medium">{feature}</span>
                 </div>
               ))}
             </div>
 
             <div className="bg-white/10 rounded-xl p-4 inline-block">
-              <span className="text-blue-200 text-sm">Идеально для: </span>
+              <span className="text-navy-200 text-sm">Идеально для: </span>
               <span className="text-white font-semibold">{cardScenarios[activeScenario].idealFor}</span>
             </div>
           </div>
@@ -282,7 +284,7 @@ export default function TradeCorpPage() {
                 key={index}
                 className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-blue-600">
+                <div className="w-14 h-14 bg-navy-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-navy-600">
                   {participant.icon}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{participant.title}</h3>

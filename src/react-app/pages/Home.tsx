@@ -24,7 +24,7 @@ export default function Home() {
       category: 'Cloud Platform',
       description: 'Флагманская платформа для централизованного управления сетью АЗС. Мониторинг, ценообразование и аналитика в едином окне.',
       image: '/images/tradeframe-preview.png',
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-600 to-navy-800',
       link: '/products/trade-frame',
       icon: <Globe className="w-6 h-6 text-white" />,
       featured: true // Флагманский продукт
@@ -33,7 +33,7 @@ export default function Home() {
       name: 'TradeCorp',
       category: 'Fintech Core',
       description: 'Процессинг топливных карт и биллинг корпоративных клиентов.',
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-600 to-navy-800',
       link: '/products/trade-corp',
       icon: <ShieldCheck className="w-6 h-6 text-white" />
     },
@@ -41,7 +41,7 @@ export default function Home() {
       name: 'TradeGate',
       category: 'Integration Hub',
       description: 'Интеграция с топливными агрегаторами: Яндекс.Заправки, СберАвто и другими. Приём онлайн-заказов.',
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-600 to-navy-800',
       link: '/products/trade-gate',
       icon: <Globe className="w-6 h-6 text-white" />
     },
@@ -49,7 +49,7 @@ export default function Home() {
       name: 'TradePoint',
       category: 'Front-Office',
       description: 'Системы управления для любых типов АЗС: автоматических, ведомственных и классических с оператором.',
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-600 to-navy-800',
       link: '/products/dw-terminal',
       icon: <Zap className="w-6 h-6 text-white" />
     },
@@ -57,7 +57,7 @@ export default function Home() {
       name: 'TradeBonus',
       category: 'Loyalty System',
       description: 'Маркетинговая платформа и мобильное приложение для клиентов.',
-      gradient: 'from-blue-700 to-indigo-800',
+      gradient: 'from-navy-600 to-navy-800',
       link: '/products/dw-loyalty',
       icon: <Smartphone className="w-6 h-6 text-white" />
     }
@@ -73,11 +73,11 @@ export default function Home() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 relative overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 relative overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-20">
         {/* Animated Background */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <HexagonPattern id="hexagons-home" />
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full text-center">
           <div className="flex flex-col items-center w-full mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-              <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
               <span className="text-xs font-semibold text-white tracking-wide uppercase">TradeSuite Ecosystem</span>
             </div>
 
@@ -94,13 +94,13 @@ export default function Home() {
             </h1>
 
             <div className="flex flex-col items-center max-w-4xl mx-auto">
-              <p className="text-lg lg:text-xl text-blue-100/90 leading-relaxed mb-8 font-light text-center">
+              <p className="text-lg lg:text-xl text-navy-100/90 leading-relaxed mb-8 font-light text-center">
                 DataWorker развивает экосистему TradeSuite — комплекс продуктов и услуг для управления сетью торговых объектов на рынке нефтепродуктообеспечения.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up mb-12">
-                <Link to="/products" className="px-6 py-3 lg:px-8 lg:py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl font-bold text-base lg:text-lg shadow-xl shadow-blue-500/20 hover:scale-105 transition-all duration-300 flex items-center gap-2">
-                  Экосистема TradeSuite
+                <Link to="/products" className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-navy-950 rounded-2xl font-bold text-base lg:text-lg shadow-xl hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  Продукты TradeSuite
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link to="/services" className="px-6 py-3 lg:px-8 lg:py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-2xl font-bold text-base lg:text-lg hover:bg-white/20 transition-all duration-300">
@@ -113,15 +113,15 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-6 lg:gap-16 border-t border-white/10 pt-8">
                <div>
                   <div className="text-3xl lg:text-4xl font-bold text-white mb-1">20</div>
-                  <div className="text-xs lg:text-sm text-blue-200/60 uppercase tracking-wider font-medium">Лет опыта</div>
+                  <div className="text-xs lg:text-sm text-navy-200/60 uppercase tracking-wider font-medium">Лет опыта</div>
                </div>
                <div>
                   <div className="text-3xl lg:text-4xl font-bold text-white mb-1">50+</div>
-                  <div className="text-xs lg:text-sm text-blue-200/60 uppercase tracking-wider font-medium">Проектов</div>
+                  <div className="text-xs lg:text-sm text-navy-200/60 uppercase tracking-wider font-medium">Проектов</div>
                </div>
                <div>
                   <div className="text-3xl lg:text-4xl font-bold text-white mb-1">24/7</div>
-                  <div className="text-xs lg:text-sm text-blue-200/60 uppercase tracking-wider font-medium">Поддержка</div>
+                  <div className="text-xs lg:text-sm text-navy-200/60 uppercase tracking-wider font-medium">Поддержка</div>
                </div>
             </div>
           </div>
@@ -133,20 +133,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Экосистема <span className="text-blue-600">TradeSuite</span>
+              Экосистема <span className="text-navy-600">TradeSuite</span>
             </h2>
             <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-4">
               Полный цикл автоматизации топливного ритейла: от управления оборудованием на АЗС до облачной аналитики и программ лояльности.
             </p>
             <Link
               to="/products#deployment"
-              className="inline-flex items-center gap-3 mt-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 hover:border-blue-300 rounded-full text-sm font-medium text-blue-700 hover:text-blue-800 transition-all duration-300 group shadow-sm hover:shadow-md"
+              className="inline-flex items-center gap-3 mt-2 px-5 py-2.5 bg-gradient-to-r from-navy-100/50 to-navy-200/50 hover:from-navy-100 hover:to-navy-200 border border-navy-300 hover:border-navy-400 rounded-full text-sm font-medium text-navy-800 hover:text-navy-900 transition-all duration-300 group shadow-sm hover:shadow-md"
             >
-              <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-navy-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
               </svg>
               <span>SaaS-подписка с гибким развёртыванием — облако или On-Premise</span>
-              <svg className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-navy-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -160,24 +160,24 @@ export default function Home() {
                 className={`group relative overflow-hidden rounded-3xl transition-all duration-500 flex flex-col ${
                     product.featured
                       ? 'lg:col-span-3 lg:flex-row lg:items-stretch bg-gray-900 text-white hover:bg-gray-800 border border-gray-800 hover:border-gray-700 hover:shadow-2xl p-0'
-                      : 'bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 hover:shadow-2xl p-8'
+                      : 'bg-gray-50 hover:bg-white border border-gray-100 hover:border-navy-100 hover:shadow-2xl p-8'
                 }`}
               >
                 <div className={`${product.featured ? 'lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center' : ''} relative z-10`}>
                     <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center mb-6 shadow-lg`}>
                       {product.icon}
                     </div>
-                    <div className={`text-sm font-bold mb-2 uppercase tracking-wide ${product.featured ? 'text-blue-400' : 'text-blue-600'}`}>
+                    <div className={`text-sm font-bold mb-2 uppercase tracking-wide ${product.featured ? 'text-navy-400' : 'text-navy-600'}`}>
                         {product.category}
                     </div>
-                    <h3 className={`text-2xl lg:text-3xl font-bold mb-4 ${product.featured ? 'text-white' : 'text-gray-900 group-hover:text-blue-700'} transition-colors`}>
+                    <h3 className={`text-2xl lg:text-3xl font-bold mb-4 ${product.featured ? 'text-white' : 'text-gray-900 group-hover:text-navy-700'} transition-colors`}>
                       {product.name}
                     </h3>
                     <p className={`leading-relaxed mb-6 ${product.featured ? 'text-gray-300 text-lg' : 'text-gray-600'}`}>
                       {product.description}
                     </p>
                     
-                    <div className={`flex items-center font-semibold group-hover:translate-x-2 transition-transform ${product.featured ? 'text-white' : 'text-blue-600'}`}>
+                    <div className={`flex items-center font-semibold group-hover:translate-x-2 transition-transform ${product.featured ? 'text-white' : 'text-navy-600'}`}>
                         Подробнее <ArrowRight className="w-5 h-5 ml-2" />
                     </div>
                 </div>
@@ -189,10 +189,10 @@ export default function Home() {
                 
                 {/* Featured Card Visual */}
                 {product.featured && (
-                    <div className="hidden lg:block lg:w-1/2 relative bg-gradient-to-br from-blue-900 via-blue-950 to-indigo-950 overflow-hidden border-l border-white/10">
+                    <div className="hidden lg:block lg:w-1/2 relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden border-l border-white/10">
                         {/* Background decorations */}
-                        <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl"></div>
-                        <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-indigo-500/20 rounded-full blur-3xl"></div>
+                        <div className="absolute -top-20 -right-20 w-60 h-60 bg-navy-400/20 rounded-full blur-3xl"></div>
+                        <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-navy-500/20 rounded-full blur-3xl"></div>
 
                         {/* Dashboard Screenshot */}
                         <div className="relative z-10 p-6 h-full flex items-center">
@@ -208,7 +208,7 @@ export default function Home() {
                           {/* Stats overlay */}
                           <div className="absolute bottom-8 right-8 p-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl">
                             <div className="text-xs text-gray-500 uppercase tracking-wider mb-1">Выручка сегодня</div>
-                            <div className="text-xl font-bold text-blue-600">₽ 3,717,407</div>
+                            <div className="text-xl font-bold text-navy-600">₽ 3,717,407</div>
                           </div>
                         </div>
                     </div>
@@ -218,7 +218,7 @@ export default function Home() {
           </div>
           
           <div className="mt-12 text-center">
-            <Link to="/products" className="inline-flex items-center text-gray-500 hover:text-blue-600 font-medium transition-colors">
+            <Link to="/products" className="inline-flex items-center text-gray-500 hover:text-navy-600 font-medium transition-colors">
               Перейти в каталог решений <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
@@ -226,10 +226,10 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 py-24 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -238,7 +238,7 @@ export default function Home() {
                 <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
                    Профессиональная разработка
                 </h2>
-                <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+                <p className="text-xl text-navy-100 mb-10 leading-relaxed">
                    Не подходит готовое решение? Наша команда инженеров создаст уникальный продукт под ваши задачи. От микроконтроллеров до нейросетей.
                 </p>
 
@@ -250,14 +250,14 @@ export default function Home() {
                         </div>
                         <div>
                            <div className="font-bold text-white">{service.name}</div>
-                           <div className="text-sm text-blue-200/70">{service.desc}</div>
+                           <div className="text-sm text-navy-200/70">{service.desc}</div>
                         </div>
                      </div>
                    ))}
                 </div>
 
                 <div className="mt-12">
-                   <Link to="/services" className="px-8 py-4 bg-white text-blue-700 rounded-2xl font-bold hover:bg-blue-50 transition-colors inline-flex items-center shadow-xl">
+                   <Link to="/services" className="px-8 py-4 bg-white text-navy-800 rounded-2xl font-bold hover:bg-navy-50 transition-colors inline-flex items-center shadow-xl">
                       Все услуги
                       <ArrowRight className="w-5 h-5 ml-2" />
                    </Link>
@@ -272,7 +272,7 @@ export default function Home() {
                        </div>
                        <div>
                           <h3 className="text-xl font-bold text-white mb-2">Полный цикл (Full Cycle)</h3>
-                          <p className="text-blue-100/70">Берем на себя всё: от бизнес-анализа и прототипирования до поддержки серверов 24/7.</p>
+                          <p className="text-navy-100/70">Берем на себя всё: от бизнес-анализа и прототипирования до поддержки серверов 24/7.</p>
                        </div>
                     </div>
                     <div className="flex items-start gap-6">
@@ -281,7 +281,7 @@ export default function Home() {
                        </div>
                        <div>
                           <h3 className="text-xl font-bold text-white mb-2">Собственный R&D</h3>
-                          <p className="text-blue-100/70">Интегрируем передовые технологии (AI, IoT), которые тестируем в собственных продуктах.</p>
+                          <p className="text-navy-100/70">Интегрируем передовые технологии (AI, IoT), которые тестируем в собственных продуктах.</p>
                        </div>
                     </div>
                     <div className="flex items-start gap-6">
@@ -290,7 +290,7 @@ export default function Home() {
                        </div>
                        <div>
                           <h3 className="text-xl font-bold text-white mb-2">Enterprise-уровень</h3>
-                          <p className="text-blue-100/70">Опыт работы с федеральными сетями, банками и нефтяными компаниями.</p>
+                          <p className="text-navy-100/70">Опыт работы с федеральными сетями, банками и нефтяными компаниями.</p>
                        </div>
                     </div>
                  </div>
@@ -310,7 +310,7 @@ export default function Home() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-blue-700 to-indigo-800 text-white rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-xl hover:shadow-2xl"
+            className="inline-flex items-center px-10 py-5 bg-navy-950 text-white rounded-2xl font-bold text-xl hover:bg-navy-900 hover:scale-105 transition-all shadow-xl hover:shadow-2xl"
           >
             Связаться с нами
             <ArrowRight className="w-6 h-6 ml-2" />

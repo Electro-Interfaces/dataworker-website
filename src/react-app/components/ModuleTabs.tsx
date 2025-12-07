@@ -52,13 +52,13 @@ export default function ModuleTabs({
                 onClick={() => setActiveModule(index)}
                 className={`flex items-center gap-3 p-3 lg:p-3.5 rounded-xl text-left transition-all duration-300 flex-shrink-0 lg:flex-shrink ${
                   activeModule === index
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
+                    ? 'bg-navy-600 text-white shadow-lg shadow-navy-500/25'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-100'
                 }`}
               >
                 <div
                   className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    activeModule === index ? 'bg-white/20' : 'bg-blue-50 text-blue-600'
+                    activeModule === index ? 'bg-white/20' : 'bg-navy-50 text-navy-600'
                   }`}
                 >
                   {module.icon}
@@ -78,7 +78,7 @@ export default function ModuleTabs({
             <div className="bg-white rounded-2xl p-5 lg:p-6 shadow-lg border border-gray-100 min-h-[600px] flex flex-col">
               {/* Module Header */}
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-navy-600 to-navy-700 rounded-xl flex items-center justify-center text-white shadow-md shadow-navy-200">
                   {modules[activeModule].icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">
@@ -95,7 +95,7 @@ export default function ModuleTabs({
               <div className="grid sm:grid-cols-2 gap-2.5">
                 {modules[activeModule].features.map((feature, i) => (
                   <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-gray-50">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-navy-500 flex-shrink-0" />
                     <span className="text-gray-700 text-sm font-medium">{feature}</span>
                   </div>
                 ))}
@@ -107,7 +107,7 @@ export default function ModuleTabs({
               {/* Module Image or Illustration */}
               {(modules[activeModule].image || modules[activeModule].illustration) && (
                 <div className="mt-auto group/img relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-navy-500 to-navy-600 rounded-2xl opacity-20 blur-sm group-hover/img:opacity-30 transition-opacity"></div>
                   <div className="relative rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-gray-100 flex justify-center items-center min-h-[280px]">
                     {modules[activeModule].image ? (
                       <img

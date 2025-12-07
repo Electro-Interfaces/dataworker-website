@@ -31,36 +31,38 @@ import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
 // Hero Illustration Component
 const HeroIllustration = () => (
-  <div className="relative rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl p-6">
-    <div className="w-[380px] h-[240px] relative">
-      {/* Center hub */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl">
-        <Workflow className="w-10 h-10 text-white" />
+  <div className="relative pl-8 pb-6">
+    <div className="rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm shadow-2xl p-6">
+      <div className="w-[380px] h-[240px] relative">
+        {/* Center hub */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-navy-700 to-navy-900 rounded-2xl flex items-center justify-center shadow-xl border border-white/10">
+          <Workflow className="w-10 h-10 text-white" />
+        </div>
+        {/* Connecting nodes */}
+        <div className="absolute top-4 left-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+          <Smartphone className="w-6 h-6 text-white/70" />
+        </div>
+        <div className="absolute top-4 right-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+          <Store className="w-6 h-6 text-white/70" />
+        </div>
+        <div className="absolute bottom-4 left-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+          <Activity className="w-6 h-6 text-white/70" />
+        </div>
+        <div className="absolute bottom-4 right-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
+          <FileText className="w-6 h-6 text-white/70" />
+        </div>
+        {/* Connecting lines */}
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 380 240">
+          <line x1="65" y1="60" x2="150" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+          <line x1="315" y1="60" x2="230" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+          <line x1="65" y1="180" x2="150" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+          <line x1="315" y1="180" x2="230" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
+        </svg>
       </div>
-      {/* Connecting nodes */}
-      <div className="absolute top-4 left-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
-        <Smartphone className="w-6 h-6 text-white/70" />
-      </div>
-      <div className="absolute top-4 right-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
-        <Store className="w-6 h-6 text-white/70" />
-      </div>
-      <div className="absolute bottom-4 left-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
-        <Activity className="w-6 h-6 text-white/70" />
-      </div>
-      <div className="absolute bottom-4 right-8 w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center border border-white/20">
-        <FileText className="w-6 h-6 text-white/70" />
-      </div>
-      {/* Connecting lines */}
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 380 240">
-        <line x1="65" y1="60" x2="150" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
-        <line x1="315" y1="60" x2="230" y2="100" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
-        <line x1="65" y1="180" x2="150" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
-        <line x1="315" y1="180" x2="230" y2="140" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeDasharray="4 4" />
-      </svg>
     </div>
     {/* Stats badge */}
-    <div className="absolute -bottom-4 -left-8 p-4 bg-gradient-to-r from-blue-600/90 to-blue-800/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
-      <span className="text-blue-100/80 text-[10px] uppercase tracking-wider block mb-1">Обработано сегодня</span>
+    <div className="absolute bottom-0 left-0 p-4 bg-gradient-to-r from-navy-800/95 to-navy-950/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl">
+      <span className="text-navy-200 text-[10px] uppercase tracking-wider block mb-1">Обработано сегодня</span>
       <span className="text-white font-bold text-xl">4,519</span>
     </div>
   </div>
@@ -190,7 +192,7 @@ export default function TradeGatePage() {
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
             Для кого TradeGate
           </h2>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+          <p className="text-lg text-navy-100 max-w-2xl mx-auto">
             Решение для всех участников процесса онлайн-заказов
           </p>
         </div>
@@ -205,7 +207,7 @@ export default function TradeGatePage() {
                 {audience.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{audience.title}</h3>
-              <p className="text-blue-100">{audience.description}</p>
+              <p className="text-navy-100">{audience.description}</p>
             </div>
           ))}
         </div>

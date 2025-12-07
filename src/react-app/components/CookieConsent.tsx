@@ -33,8 +33,8 @@ export default function CookieConsent() {
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 sm:p-6 relative">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           {/* Icon */}
-          <div className="hidden sm:flex w-12 h-12 bg-blue-100 rounded-xl items-center justify-center flex-shrink-0">
-            <Cookie className="w-6 h-6 text-blue-600" />
+          <div className="hidden sm:flex w-12 h-12 bg-navy-100 rounded-xl items-center justify-center flex-shrink-0">
+            <Cookie className="w-6 h-6 text-navy-600" />
           </div>
 
           {/* Text */}
@@ -42,7 +42,7 @@ export default function CookieConsent() {
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
               Мы используем файлы cookie для улучшения работы сайта и анализа трафика.
               Продолжая использовать сайт, вы соглашаетесь с{' '}
-              <Link to="/privacy" className="text-blue-600 hover:underline font-medium">
+              <Link to="/privacy" className="text-navy-600 hover:underline font-medium">
                 политикой конфиденциальности
               </Link>.
             </p>
@@ -58,7 +58,7 @@ export default function CookieConsent() {
             </button>
             <button
               onClick={handleAccept}
-              className="flex-1 sm:flex-none px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold transition-colors shadow-lg shadow-blue-500/25"
+              className="flex-1 sm:flex-none px-6 py-2.5 bg-navy-950 hover:bg-navy-900 text-white rounded-xl text-sm font-semibold transition-colors shadow-lg shadow-navy-500/25"
             >
               Принять
             </button>

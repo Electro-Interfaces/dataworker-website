@@ -18,7 +18,7 @@ interface ProductHeroProps {
 
 const badgeColors = {
   green: 'bg-green-400',
-  blue: 'bg-blue-400',
+  blue: 'bg-navy-400',
   purple: 'bg-purple-400',
 };
 
@@ -35,11 +35,11 @@ export default function ProductHero({
   patternId = 'hexagons-product',
 }: ProductHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
+    <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden relative">
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
       </div>
 
       <HexagonPattern id={patternId} />
@@ -56,10 +56,10 @@ export default function ProductHero({
             )}
 
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 leading-[0.9] tracking-tight">
-              {title}<span className="text-blue-200">{titleAccent}</span>
+              {title}<span className="text-navy-200">{titleAccent}</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-blue-100 leading-relaxed mb-10 font-light max-w-xl">
+            <p className="text-lg lg:text-xl text-navy-100 leading-relaxed mb-10 font-light max-w-xl">
               {description}
               {subdescription && (
                 <span className="block mt-2 opacity-80 text-base">{subdescription}</span>
@@ -69,7 +69,7 @@ export default function ProductHero({
             <div className="flex flex-wrap gap-4">
               <Link
                 to={ctaLink}
-                className="px-6 py-3 bg-white text-blue-900 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="px-6 py-3 bg-white text-navy-950 rounded-xl font-bold text-base shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 {ctaText}
                 <ArrowRight className="w-4 h-4" />

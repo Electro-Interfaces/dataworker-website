@@ -111,7 +111,7 @@ export default function IntegrationsPage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-800 via-blue-900 to-indigo-950 pt-24 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 pt-24 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent" />
@@ -124,7 +124,7 @@ export default function IntegrationsPage() {
             <br />
             <span className="font-black bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">без границ</span>
           </h1>
-          <p className="text-lg lg:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-lg lg:text-xl text-navy-100 leading-relaxed max-w-2xl mx-auto mb-8">
             Подключайтесь к любым системам через открытые API и готовые коннекторы
           </p>
         </div>

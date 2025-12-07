@@ -11,19 +11,33 @@ export default {
         'gradient-card': 'linear-gradient(to bottom right, #1d4ed8, #4338ca)',
       },
       colors: {
-        primary: 'hsl(221 83% 53%)',        // Primary blue
-        'primary-dark': 'hsl(221 83% 43%)',  // Darker blue for hover states
-        accent: '#34A853',         // Google Green for accents
-        'accent-secondary': '#FBBC04',  // Google Yellow for secondary highlights
-        'light-bg': '#F8F9FA',     // Very light gray background
-        'medium-gray': '#5F6368',  // Medium gray text
-        'dark-gray': '#202124',    // Dark gray for main text
-        'off-white': '#FFFFFF',    // Pure white
-        'card-light': '#FFFFFF',   // White cards with shadows
-        'border-light': '#DADCE0', // Light borders
-        'warning-yellow': '#FFC107', // Yellow for warnings
-        'error-red': '#EA4335',    // Google Red for errors
-        'success-green': '#34A853', // Google Green for success
+        // Corporate palette - темный navy
+        navy: {
+          950: '#0a1628',  // Corporate Dark - самый темный
+          900: '#0f1f36',  // Darker
+          800: '#1a365d',  // Corporate Navy - основной фон
+          700: '#1e4175',  // Medium-dark
+          600: '#234e8a',  // Dark blue - кнопки
+          500: '#2d5a96',  // Medium - акценты
+          400: '#4070a8',  // Light accent
+          300: '#5c8bc0',  // Lighter
+          200: '#8baed5',  // Ultra light
+          100: '#c5d5e8',  // Background tint
+          50: '#e8eff6',   // Lightest
+        },
+        primary: '#2563eb',           // Corporate Blue
+        'primary-dark': '#1a365d',    // Corporate Navy
+        accent: '#3b82f6',            // Corporate Light
+        'accent-secondary': '#60a5fa', // Light blue
+        'light-bg': '#F8F9FA',
+        'medium-gray': '#5F6368',
+        'dark-gray': '#202124',
+        'off-white': '#FFFFFF',
+        'card-light': '#FFFFFF',
+        'border-light': '#DADCE0',
+        'warning-yellow': '#FFC107',
+        'error-red': '#EA4335',
+        'success-green': '#34A853',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
