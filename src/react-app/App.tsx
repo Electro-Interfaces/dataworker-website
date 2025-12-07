@@ -30,7 +30,7 @@ import ServiceIoTTerminalsPage from "@/react-app/pages/services/IoTTerminals";
 
 export default function App() {
   return (
-    <Router basename="/dataworker-website">
+    <Router>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

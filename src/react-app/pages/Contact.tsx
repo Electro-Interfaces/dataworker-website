@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { Send, CheckCircle, Mail, MapPin, MessageSquare, AlertCircle, Loader2 } from 'lucide-react';
 import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
-// TODO: Замените на ваш Formspree endpoint
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+// PHP endpoint for form submission
+const MAIL_ENDPOINT = '/send-mail.php';
 
 export default function ContactPage() {
   usePageMeta({
@@ -24,14 +24,23 @@ export default function ContactPage() {
     setError(null);
 
     const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      phone: formData.get('phone'),
+      subject: formData.get('subject'),
+      message: formData.get('message')
+    };
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(MAIL_ENDPOINT, {
         method: 'POST',
-        body: formData,
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
-        }
+        },
+        body: JSON.stringify(data)
       });
 
       if (response.ok) {

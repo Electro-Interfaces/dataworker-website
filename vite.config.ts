@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/dataworker-website/',
+  base: '/',
   server: {
     allowedHosts: true,
   },
