@@ -37,8 +37,8 @@ export default function ProductsPage() {
       name: 'TradePoint',
       category: 'Front-Office',
       href: '/products/dw-terminal',
-      description: 'Программные решения для управления АЗС любого типа: автоматических, с оператором или комбинированных. AutoPoint, FuelPoint, SelfPoint — единая платформа для всех форматов.',
-      features: ['AutoPoint — АКАЗС без персонала', 'FuelPoint — рабочее место оператора', 'SelfPoint — терминал самообслуживания', 'Интеграция с TradeFrame'],
+      description: 'Программные решения для управления АЗС любого типа: автоматических, с оператором или комбинированных. ААЗС, АЗС, ТСО — единая платформа для всех форматов.',
+      features: ['ААЗС — автоматическая АЗС без персонала', 'АЗС — станция с оператором', 'ТСО — терминал самообслуживания', 'Интеграция с TradeFrame'],
       icon: <Smartphone className="w-8 h-8" />,
       image: null,
       stats: { label: 'Типов терминалов', value: '5' }
@@ -222,7 +222,7 @@ export default function ProductsPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Облачное решение</h3>
-                  <p className="text-sm text-gray-500">На серверах DataWorker</p>
+                  <p className="text-sm text-gray-500">На серверах ElsyPlus</p>
                 </div>
               </div>
               <ul className="space-y-3 mb-6">

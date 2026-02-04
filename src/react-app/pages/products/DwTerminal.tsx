@@ -262,7 +262,7 @@ export default function TradeTerminalPage() {
               </div>
               <div className="flex-1">
                 <div className="text-white text-xs font-bold">АЗС «Центральная»</div>
-                <div className="text-navy-200 text-[10px]">Терминал SelfPoint #12</div>
+                <div className="text-navy-200 text-[10px]">ТСО #12</div>
               </div>
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             </div>
@@ -288,45 +288,45 @@ export default function TradeTerminalPage() {
 
   const terminalTypes = [
     {
-      code: 'AP',
-      name: 'AutoPoint',
-      description: 'Полностью автоматическая АЗС',
-      fullDescription: 'Автоматическая заправочная станция без персонала. SelfPoint управляет всем: оплатой, ТРК и резервуарами. Работа 24/7 с минимальными затратами на обслуживание.',
+      code: 'ААЗС',
+      name: 'ААЗС',
+      description: 'Автоматическая АЗС без персонала',
+      fullDescription: 'Автоматическая заправочная станция без персонала. ТСО управляет всем: оплатой, ТРК и резервуарами. Работа 24/7 с минимальными затратами на обслуживание.',
       icon: <Building2 className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Без персонала 24/7', 'Контроль резервуаров', 'Удалённое управление', 'Минимальные затраты']
     },
     {
-      code: 'FP',
-      name: 'FuelPoint',
-      description: 'Рабочее место оператора АЗС',
+      code: 'АЗС',
+      name: 'АЗС',
+      description: 'АЗС с оператором',
       fullDescription: 'Классическая система управления для станций с персоналом. Кассовый терминал объединяет управление топливораздаточными колонками, приём оплаты и продажу товаров магазина.',
       icon: <Monitor className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Рабочее место кассира', 'Управление ТРК', 'Магазин и Кафе', 'Поддержка всех оплат']
     },
     {
-      code: 'FP+SP',
-      name: 'FuelPoint + SelfPoint',
+      code: 'АЗС+ТСО',
+      name: 'АЗС + ТСО',
       description: 'Терминал как модуль к АЗС',
-      fullDescription: 'SelfPoint устанавливается как дополнительный модуль к станции с оператором. Днём — два потока клиентов, ночью — автоматический режим без персонала.',
+      fullDescription: 'ТСО устанавливается как дополнительный модуль к станции с оператором. Днём — два потока клиентов, ночью — автоматический режим без персонала.',
       icon: <Users className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Ускорение обслуживания', 'Круглосуточная работа', 'Экономия на сменах', 'Гибкое переключение']
     },
     {
-      code: 'GP',
-      name: 'GasPoint',
-      description: 'Терминал для АГЗС',
+      code: 'АГЗС',
+      name: 'АГЗС',
+      description: 'Газовая заправочная станция',
       fullDescription: 'Специализированная конфигурация для автогазозаправочных станций. Учёт особенностей работы с СУГ: температурная коррекция, контроль давления.',
       icon: <Zap className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Учёт СУГ', 'Температурная коррекция', 'Контроль давления', 'Специальные датчики']
     },
     {
-      code: 'CP',
-      name: 'CorpPoint',
-      description: 'Корпоративная заправка',
+      code: 'ВАЗС',
+      name: 'Ведомственная АЗС',
+      description: 'Закрытая заправка предприятия',
       fullDescription: 'Закрытая заправочная станция на территории предприятия. Авторизация по корпоративным картам, учёт топлива по водителям и транспортным средствам.',
       icon: <Shield className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
@@ -359,7 +359,7 @@ export default function TradeTerminalPage() {
 
               <p className="text-lg lg:text-xl text-navy-100 leading-relaxed mb-10 font-light max-w-xl">
                 Единая экосистема управления продажами на АЗС.
-                <span className="block mt-2 opacity-80 text-base">Объединяет кассы FuelPoint, терминалы SelfPoint и контроллеры GasPoint.</span>
+                <span className="block mt-2 opacity-80 text-base">Объединяет АЗС с оператором, терминалы самообслуживания (ТСО) и АГЗС.</span>
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -390,7 +390,7 @@ export default function TradeTerminalPage() {
                     <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-4 mb-3 shadow-inner">
                       {/* Screen Header */}
                       <div className="flex items-center justify-between mb-4">
-                        <div className="text-white/90 text-xs font-bold uppercase tracking-wider">SelfPoint</div>
+                        <div className="text-white/90 text-xs font-bold uppercase tracking-wider">ТСО</div>
                         <div className="flex items-center gap-1">
                           <div className="w-1.5 h-1.5 rounded-full bg-green-400"></div>
                           <span className="text-green-300 text-[10px]">Online</span>
@@ -622,7 +622,7 @@ export default function TradeTerminalPage() {
             Готовы к автоматизации?
           </h2>
           <p className="text-xl text-navy-100 mb-8">
-            Узнайте, как SelfPoint поможет вашему топливному бизнесу работать эффективнее
+            Узнайте, как ТСО поможет вашему топливному бизнесу работать эффективнее
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

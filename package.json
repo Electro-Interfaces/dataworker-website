@@ -1,6 +1,6 @@
 {
-  "name": "dataworker-website",
-  "description": "Корпоративный веб-сайт DataWorker - экосистема решений для топливной отрасли (TradeCorp, TradeTerminal, TradeBonus, TradeStation, TradeFrame)",
+  "name": "elsyplus-website",
+  "description": "Корпоративный веб-сайт ElsyPlus — IT и автоматизация для топливной отрасли (TradeCorp, TradeTerminal, TradeBonus, TradeStation, TradeFrame)",
   "version": "1.0.0",
   "private": true,
   "type": "module",

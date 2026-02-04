@@ -251,7 +251,7 @@ export default function ProductDwStationPage() {
             {/* Plus Sign */}
             <div className="text-6xl lg:text-8xl text-accent font-light mx-8">+</div>
             
-            {/* DataWorker API */}
+            {/* ElsyPlus API */}
             <div className="group">
               <div className="w-40 h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-accent/10 to-accent/20 rounded-3xl flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:scale-105 transition-all duration-700 border-2 border-accent/30">
                 <div className="text-center">

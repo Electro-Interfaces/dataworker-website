@@ -6,8 +6,8 @@ interface PageMetaProps {
   keywords?: string;
 }
 
-const SITE_NAME = 'DataWorker';
-const DEFAULT_DESCRIPTION = 'DataWorker — разработка программного обеспечения для автоматизации бизнеса. Экосистема TradeSuite для управления сетью АЗС.';
+const SITE_NAME = 'ElsyPlus';
+const DEFAULT_DESCRIPTION = 'ElsyPlus — IT и автоматизация для топливной отрасли. Экосистема TradeSuite для управления сетью АЗС.';
 
 export function usePageMeta({ title, description = DEFAULT_DESCRIPTION, keywords }: PageMetaProps) {
   useEffect(() => {

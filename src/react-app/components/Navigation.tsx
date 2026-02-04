@@ -8,16 +8,7 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [showTradeSuite, setShowTradeSuite] = useState(false);
   const location = useLocation();
-
-  // Toggle brand name: 45s DataWorker, 15s TradeSuite
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowTradeSuite((prev) => !prev);
-    }, showTradeSuite ? 15000 : 45000);
-    return () => clearTimeout(timeout);
-  }, [showTradeSuite]);
 
   // Handle scroll effect
   useEffect(() => {
@@ -92,29 +83,16 @@ const Navigation = () => {
           {/* Logo - Hexagon DW */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-4 group relative z-50">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo.png`}
-              alt="DataWorker"
+              src={`${import.meta.env.BASE_URL}images/logo.svg`}
+              alt="ElsyPlus"
               className="w-12 h-12 rounded-2xl shadow-lg shadow-navy-500/25 group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="flex flex-col overflow-hidden">
-              <div className="relative h-7">
-                <span
-                  className={`font-display text-2xl font-bold tracking-tight leading-none absolute left-0 transition-all duration-500 ${
-                    showTradeSuite ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'
-                  }`}
-                >
-                  <span className="text-dark-gray">Data</span><span className="text-navy-600">Worker</span>
-                </span>
-                <span
-                  className={`font-display text-2xl font-bold tracking-tight leading-none absolute left-0 transition-all duration-500 ${
-                    showTradeSuite ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  }`}
-                >
-                  <span className="text-dark-gray">Trade</span><span className="text-navy-600">Suite</span>
-                </span>
-              </div>
+            <div className="flex flex-col">
+              <span className="font-display text-2xl font-bold tracking-tight leading-none">
+                <span className="text-dark-gray">Elsy</span><span className="text-navy-600">Plus</span>
+              </span>
               <span className="text-xs font-medium tracking-widest uppercase opacity-60 leading-none mt-1.5 text-medium-gray">
-                Digital Solutions
+                IT & Automation
               </span>
             </div>
           </Link>

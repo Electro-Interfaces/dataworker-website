@@ -1,11 +1,11 @@
-# DataWorker Website
-# https://dataworker.ru
+# ElsyPlus Website
+# https://elsyplus.ru
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dataworker.ru/sitemap.xml
+Sitemap: https://elsyplus.ru/sitemap.xml
 
 # Disallow admin and internal paths
 Disallow: /api/

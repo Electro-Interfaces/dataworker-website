@@ -15,8 +15,8 @@ import {
 export default function Home() {
   usePageMeta({
     title: 'Главная',
-    description: 'DataWorker — разработка программного обеспечения для автоматизации бизнеса. Экосистема TradeSuite для управления сетью АЗС и топливного ритейла.',
-    keywords: 'АЗС, автоматизация, топливный ритейл, TradeSuite, DataWorker, программное обеспечение'
+    description: 'ElsyPlus — IT и автоматизация для топливной отрасли. Экосистема TradeSuite для управления сетью АЗС и топливного ритейла.',
+    keywords: 'АЗС, автоматизация, топливный ритейл, TradeSuite, ElsyPlus, программное обеспечение'
   });
   const products = [
     {
@@ -86,25 +86,25 @@ export default function Home() {
           <div className="flex flex-col items-center w-full mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
               <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
-              <span className="text-xs font-semibold text-white tracking-wide uppercase">TradeSuite Ecosystem</span>
+              <span className="text-xs font-semibold text-white tracking-wide uppercase">ElsyPlus</span>
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight tracking-tight w-full whitespace-nowrap text-center">
-              Создаем цифровой фундамент бизнеса
+              IT и автоматизация для топливной отрасли
             </h1>
 
             <div className="flex flex-col items-center max-w-4xl mx-auto">
               <p className="text-lg lg:text-xl text-navy-100/90 leading-relaxed mb-8 font-light text-center">
-                DataWorker развивает экосистему TradeSuite — комплекс продуктов и услуг для управления сетью торговых объектов на рынке нефтепродуктообеспечения.
+                ElsyPlus — команда инженеров и разработчиков, продолжающая многолетнюю экспертизу в автоматизации топливного ритейла. Развиваем экосистему TradeSuite для управления сетями АЗС.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up mb-12">
-                <Link to="/products" className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-navy-950 rounded-2xl font-bold text-base lg:text-lg shadow-xl hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center gap-2">
-                  Продукты TradeSuite
+                <Link to="/contact" className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-navy-950 rounded-2xl font-bold text-base lg:text-lg shadow-xl hover:bg-gray-100 hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  Обсудить задачу
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link to="/services" className="px-6 py-3 lg:px-8 lg:py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-2xl font-bold text-base lg:text-lg hover:bg-white/20 transition-all duration-300">
-                  Услуги разработки
+                <Link to="/products" className="px-6 py-3 lg:px-8 lg:py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-2xl font-bold text-base lg:text-lg hover:bg-white/20 transition-all duration-300">
+                  Посмотреть решения
                 </Link>
               </div>
             </div>

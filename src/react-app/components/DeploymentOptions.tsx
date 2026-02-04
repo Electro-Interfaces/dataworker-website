@@ -29,7 +29,7 @@ export default function DeploymentOptions() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">Облачное решение</h3>
-                <p className="text-sm text-gray-500">На серверах DataWorker</p>
+                <p className="text-sm text-gray-500">На серверах ElsyPlus</p>
               </div>
             </div>
 
