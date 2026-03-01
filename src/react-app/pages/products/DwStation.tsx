@@ -294,7 +294,7 @@ export default function ProductDwStationPage() {
         </div>
       </section>
 
-      {/* TradeFrame Integration Section */}
+      {/* TradeControl Integration Section */}
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="bg-gray-50 rounded-3xl p-12 shadow-xl">
@@ -303,11 +303,11 @@ export default function ProductDwStationPage() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 leading-tight">
-              Управляется через TradeFrame
+              Управляется через TradeControl
             </h2>
 
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Все станции TradeStation централизованно управляются через веб-платформу TradeFrame.
+              Все станции TradeStation централизованно управляются через веб-платформу TradeControl.
               Контролируйте цены, остатки топлива, получайте аналитику и управляйте сетью из единого центра.
             </p>
 
@@ -338,10 +338,10 @@ export default function ProductDwStationPage() {
             </div>
 
             <Link
-              to="/products/trade-frame"
+              to="/products/trade-control"
               className="inline-flex items-center px-8 py-4 bg-navy-950 text-white rounded-2xl font-semibold hover:bg-navy-950/90 hover:scale-105 transition-all duration-300 shadow-xl"
             >
-              Узнать больше о TradeFrame
+              Узнать больше о TradeControl
               <ArrowRight className="w-5 h-5 ml-3" />
             </Link>
           </div>

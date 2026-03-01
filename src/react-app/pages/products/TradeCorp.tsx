@@ -312,7 +312,7 @@ export default function TradeCorpPage() {
         title="Готовы оптимизировать процессинг?"
         subtitle="Узнайте, как TradeCorp поможет управлять топливными картами эффективнее"
         primaryLink={{ href: '/contact', text: 'Запросить демо' }}
-        secondaryLink={{ href: '/products/trade-frame', text: 'Платформа TradeFrame' }}
+        secondaryLink={{ href: '/products/trade-control', text: 'Платформа TradeControl' }}
       />
     </PageLayout>
   );

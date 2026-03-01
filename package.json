@@ -1,6 +1,6 @@
 {
   "name": "elsyplus-website",
-  "description": "Корпоративный веб-сайт ElsyPlus — IT и автоматизация для топливной отрасли (TradeCorp, TradeTerminal, TradeBonus, TradeStation, TradeFrame)",
+  "description": "Корпоративный веб-сайт ElsyPlus — IT и автоматизация для топливной отрасли (TradeCorp, TradeTerminal, TradeBonus, TradeStation, TradeControl)",
   "version": "1.0.0",
   "private": true,
   "type": "module",

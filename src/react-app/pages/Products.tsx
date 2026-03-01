@@ -20,13 +20,13 @@ export default function ProductsPage() {
   usePageMeta({
     title: 'Продукты',
     description: 'Продукты экосистемы TradeSuite для автоматизации топливного ритейла',
-    keywords: 'TradeFrame, TradePoint, TradeCorp, TradeGate, TradeBonus, продукты, топливный процессинг, автоматизация АЗС'
+    keywords: 'TradeControl, TradePoint, TradeCorp, TradeGate, TradeBonus, продукты, топливный процессинг, автоматизация АЗС'
   });
   const products = [
     {
-      name: 'TradeFrame',
+      name: 'TradeControl',
       category: 'Cloud Platform',
-      href: '/products/trade-frame',
+      href: '/products/trade-control',
       description: 'Облачная платформа для централизованного управления сетью АЗС. Ценообразование, мониторинг резервуаров, сменные отчёты, уведомления в Telegram — всё в одном интерфейсе.',
       features: ['Управление ценами по всей сети', 'Мониторинг резервуаров в реальном времени', 'Уведомления в Telegram и Email', 'RBAC с 40+ разрешениями'],
       icon: <Globe className="w-8 h-8" />,
@@ -38,7 +38,7 @@ export default function ProductsPage() {
       category: 'Front-Office',
       href: '/products/dw-terminal',
       description: 'Программные решения для управления АЗС любого типа: автоматических, с оператором или комбинированных. ААЗС, АЗС, ТСО — единая платформа для всех форматов.',
-      features: ['ААЗС — автоматическая АЗС без персонала', 'АЗС — станция с оператором', 'ТСО — терминал самообслуживания', 'Интеграция с TradeFrame'],
+      features: ['ААЗС — автоматическая АЗС без персонала', 'АЗС — станция с оператором', 'ТСО — терминал самообслуживания', 'Интеграция с TradeControl'],
       icon: <Smartphone className="w-8 h-8" />,
       image: null,
       stats: { label: 'Типов терминалов', value: '5' }

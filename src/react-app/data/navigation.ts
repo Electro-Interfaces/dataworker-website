@@ -25,8 +25,8 @@ export type NavItem = NavItemWithDropdown | NavItemSimple;
 // Products data
 export const products: NavLink[] = [
   {
-    name: 'TradeFrame',
-    href: '/products/trade-frame',
+    name: 'TradeControl',
+    href: '/products/trade-control',
     description: 'Облачная платформа управления сетью АЗС',
     icon: 'monitor',
   },
@@ -129,11 +129,11 @@ export interface ProductCategory {
 
 export const productCategories: ProductCategory[] = [
   {
-    name: 'TradeFrame',
+    name: 'TradeControl',
     category: 'Cloud Platform',
     description: 'Флагманская платформа для централизованного управления сетью АЗС. Мониторинг, ценообразование и аналитика в едином окне.',
     gradient: 'from-navy-700 to-navy-800',
-    link: '/products/trade-frame',
+    link: '/products/trade-control',
     featured: true,
   },
   {

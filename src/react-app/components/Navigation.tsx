@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight, User } from "lucide-react";
 import { Link, useLocation } from "react-router";
 import { navItems } from "@/react-app/data/navigation";
+import LoginModal from "./LoginModal";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
   const location = useLocation();
 
   // Handle scroll effect
@@ -71,6 +73,7 @@ const Navigation = () => {
   };
 
   return (
+    <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
@@ -80,21 +83,14 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-28">
-          {/* Logo - Hexagon DW */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-4 group relative z-50">
-            <img
-              src={`${import.meta.env.BASE_URL}images/logo.svg`}
-              alt="ElsyPlus"
-              className="w-12 h-12 rounded-2xl shadow-lg shadow-navy-500/25 group-hover:scale-105 transition-transform duration-300"
-            />
-            <div className="flex flex-col">
-              <span className="font-display text-2xl font-bold tracking-tight leading-none">
-                <span className="text-dark-gray">Elsy</span><span className="text-navy-600">Plus</span>
-              </span>
-              <span className="text-xs font-medium tracking-widest uppercase opacity-60 leading-none mt-1.5 text-medium-gray">
-                IT & Automation
-              </span>
-            </div>
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0 group relative z-50">
+            <span className="font-display text-3xl font-bold tracking-tight leading-none">
+              <span className="text-navy-700">Elsy</span><span className="text-navy-500 font-extrabold">Plus</span>
+            </span>
+            <span className="block text-[10px] font-semibold tracking-[0.25em] uppercase text-navy-400/70 leading-none mt-1">
+              IT & Automation
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -164,8 +160,15 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block pl-8">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3 pl-8">
+            <button
+              onClick={() => setLoginModalOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-base font-semibold transition-all duration-300 border-2 border-navy-600 text-navy-600 hover:bg-navy-50"
+            >
+              <User className="w-5 h-5" />
+              Личный кабинет
+            </button>
             <Link
               to="/contact"
               className="px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 bg-navy-600 text-white hover:bg-navy-700"
@@ -230,7 +233,14 @@ const Navigation = () => {
               )}
             </div>
           ))}
-          <div className="pt-6">
+          <div className="pt-6 space-y-4">
+            <button
+              onClick={() => { setIsOpen(false); setLoginModalOpen(true); }}
+              className="flex items-center justify-center gap-2 w-full py-5 border-2 border-navy-600 text-navy-600 rounded-2xl font-semibold text-xl active:scale-95 transition-transform"
+            >
+              <User className="w-6 h-6" />
+              Личный кабинет
+            </button>
             <Link
               to="/contact"
               className="block w-full text-center py-5 bg-navy-600 text-white rounded-2xl font-semibold text-xl shadow-lg active:scale-95 transition-transform hover:bg-navy-700"
@@ -242,6 +252,9 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
+
+    <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
+    </>
   );
 };
 

@@ -206,7 +206,7 @@ export default function TradeTerminalPage() {
       icon: <BarChart3 className="w-6 h-6" />,
       title: 'Аналитика',
       subtitle: '/analytics',
-      description: 'Полная статистика работы терминала в TradeFrame: количество транзакций, объёмы продаж, популярные виды топлива. Отчёты по способам оплаты и времени суток. Сравнение с другими точками сети для оптимизации бизнеса.',
+      description: 'Полная статистика работы терминала в TradeControl: количество транзакций, объёмы продаж, популярные виды топлива. Отчёты по способам оплаты и времени суток. Сравнение с другими точками сети для оптимизации бизнеса.',
       features: ['Статистика продаж', 'Отчёты по оплате', 'Сравнение точек', 'Экспорт данных'],
       visual: (
         <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl p-4">
@@ -242,7 +242,7 @@ export default function TradeTerminalPage() {
       icon: <Wifi className="w-6 h-6" />,
       title: 'Удалённое управление',
       subtitle: '/remote',
-      description: 'Полный контроль терминала через облачную платформу TradeFrame. Изменение цен, блокировка/разблокировка колонок, перезагрузка оборудования. Получение уведомлений о проблемах в Telegram. Удалённая диагностика и обновление ПО.',
+      description: 'Полный контроль терминала через облачную платформу TradeControl. Изменение цен, блокировка/разблокировка колонок, перезагрузка оборудования. Получение уведомлений о проблемах в Telegram. Удалённая диагностика и обновление ПО.',
       features: ['Изменение цен', 'Управление ТРК', 'Telegram-уведомления', 'Обновление ПО'],
       visual: (
         <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl p-4">
@@ -251,7 +251,7 @@ export default function TradeTerminalPage() {
               <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
                 <Wifi className="w-3 h-3 text-white" />
               </div>
-              <span className="text-white/80 text-xs font-bold">TradeFrame Cloud</span>
+              <span className="text-white/80 text-xs font-bold">TradeControl Cloud</span>
             </div>
             <span className="text-green-300 text-xs">● Подключено</span>
           </div>
@@ -555,7 +555,7 @@ export default function TradeTerminalPage() {
               Программные решения
             </h2>
             <p className="text-xl lg:text-2xl text-gray-500 max-w-3xl mx-auto">
-              Конфигурации управления оборудованием АЗС, интегрированные с платформой TradeFrame
+              Конфигурации управления оборудованием АЗС, интегрированные с платформой TradeControl
             </p>
           </div>
 
@@ -607,7 +607,7 @@ export default function TradeTerminalPage() {
           {/* Bottom note */}
           <div className="mt-12 text-center">
             <p className="text-gray-500 text-lg">
-              Все терминалы управляются через единую платформу TradeFrame
+              Все терминалы управляются через единую платформу TradeControl
             </p>
           </div>
         </div>
@@ -633,10 +633,10 @@ export default function TradeTerminalPage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              to="/products/trade-frame"
+              to="/products/trade-control"
               className="px-8 py-4 bg-white/10 text-white border-2 border-white/30 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all duration-300"
             >
-              Платформа TradeFrame
+              Платформа TradeControl
             </Link>
           </div>
         </div>

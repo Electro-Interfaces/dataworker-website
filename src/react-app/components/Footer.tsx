@@ -12,15 +12,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <img
-                src={`${import.meta.env.BASE_URL}images/logo.svg`}
-                alt="ElsyPlus"
-                className="w-10 h-10 rounded-xl"
-              />
-              <span className="font-bold text-xl">
-                <span className="text-white">Elsy</span>
-                <span className="text-navy-400">Plus</span>
+            <Link to="/" className="inline-block mb-6">
+              <span className="font-display text-2xl font-bold tracking-tight leading-none">
+                <span className="text-white">Elsy</span><span className="text-navy-400 font-extrabold">Plus</span>
+              </span>
+              <span className="block text-[10px] font-semibold tracking-[0.25em] uppercase text-gray-500 leading-none mt-1">
+                IT & Automation
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

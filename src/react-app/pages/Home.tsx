@@ -20,12 +20,12 @@ export default function Home() {
   });
   const products = [
     {
-      name: 'TradeFrame',
+      name: 'TradeControl',
       category: 'Cloud Platform',
       description: 'Флагманская платформа для централизованного управления сетью АЗС. Мониторинг, ценообразование и аналитика в едином окне.',
       image: '/images/tradeframe-preview.png',
       gradient: 'from-navy-600 to-navy-800',
-      link: '/products/trade-frame',
+      link: '/products/trade-control',
       icon: <Globe className="w-6 h-6 text-white" />,
       featured: true // Флагманский продукт
     },

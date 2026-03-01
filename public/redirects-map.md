@@ -8,7 +8,7 @@
 | https://dataworker.ru/about | https://elsyplus.ru/about |
 | https://dataworker.ru/contact | https://elsyplus.ru/contact |
 | https://dataworker.ru/integrations | https://elsyplus.ru/integrations |
-| https://dataworker.ru/products/trade-frame | https://elsyplus.ru/products/trade-frame |
+| https://dataworker.ru/products/trade-control | https://elsyplus.ru/products/trade-control |
 | https://dataworker.ru/products/trade-corp | https://elsyplus.ru/products/trade-corp |
 | https://dataworker.ru/products/trade-gate | https://elsyplus.ru/products/trade-gate |
 | https://dataworker.ru/products/dw-terminal | https://elsyplus.ru/products/dw-terminal |
