@@ -4,8 +4,8 @@ import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 export default function PrivacyPage() {
   usePageMeta({
     title: 'Политика конфиденциальности',
-    description: 'Политика конфиденциальности DataWorker',
-    keywords: 'политика конфиденциальности, персональные данные, DataWorker'
+    description: 'Политика конфиденциальности ElsyPlus',
+    keywords: 'политика конфиденциальности, персональные данные, ElsyPlus'
   });
 
   return (
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">1. Общие положения</h2>
             <p>
               Настоящая Политика конфиденциальности определяет порядок обработки и защиты
-              персональных данных пользователей сайта DataWorker (далее — «Сайт»).
+              персональных данных пользователей сайта ElsyPlus (далее — «Сайт»).
             </p>
             <p>
               Используя Сайт, вы соглашаетесь с условиями данной Политики конфиденциальности.
@@ -107,7 +107,7 @@ export default function PrivacyPage() {
               вы можете обратиться к нам:
             </p>
             <ul className="list-none mt-4 space-y-2">
-              <li><strong>Email:</strong> info@dataworker.ru</li>
+              <li><strong>Email:</strong> info@elsyplus.ru</li>
               <li><strong>Адрес:</strong> Санкт-Петербург, Россия</li>
             </ul>
           </div>

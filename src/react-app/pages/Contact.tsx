@@ -10,8 +10,8 @@ const MAIL_ENDPOINT = '/send-mail.php';
 export default function ContactPage() {
   usePageMeta({
     title: 'Контакты',
-    description: 'Свяжитесь с DataWorker для обсуждения вашего проекта',
-    keywords: 'контакты, связаться, DataWorker, консультация, техподдержка'
+    description: 'Свяжитесь с ElsyPlus для обсуждения вашего проекта',
+    keywords: 'контакты, связаться, ElsyPlus, консультация, техподдержка'
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +50,7 @@ export default function ContactPage() {
         throw new Error('Ошибка отправки');
       }
     } catch {
-      setError('Не удалось отправить сообщение. Попробуйте позже или напишите на info@dataworker.ru');
+      setError('Не удалось отправить сообщение. Попробуйте позже или напишите на info@elsyplus.ru');
     } finally {
       setIsSubmitting(false);
     }
@@ -60,14 +60,14 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Общие вопросы',
-      value: 'info@dataworker.ru',
-      href: 'mailto:info@dataworker.ru'
+      value: 'info@elsyplus.ru',
+      href: 'mailto:info@elsyplus.ru'
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: 'Техподдержка',
-      value: 'support@dataworker.ru',
-      href: 'mailto:support@dataworker.ru'
+      value: 'support@elsyplus.ru',
+      href: 'mailto:support@elsyplus.ru'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -293,11 +293,11 @@ export default function ContactPage() {
             Напишите нам для демонстрации продуктов TradeSuite
           </p>
           <a
-            href="mailto:info@dataworker.ru"
+            href="mailto:info@elsyplus.ru"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-navy-950 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <Mail className="w-5 h-5" />
-            info@dataworker.ru
+            info@elsyplus.ru
           </a>
         </div>
       </section>

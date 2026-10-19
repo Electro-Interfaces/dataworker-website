@@ -1,0 +1,10 @@
+# .htaccess для старого домена dataworker.ru
+# Установить на старом хостинге для 301-редиректа на elsyplus.ru
+#
+# Все запросы перенаправляются на новый домен с сохранением пути
+
+RewriteEngine On
+
+# Перенаправление всех запросов на новый домен
+RewriteCond %{HTTP_HOST} ^(www\.)?dataworker\.ru$ [NC]
+RewriteRule ^(.*)$ https://elsyplus.ru/$1 [R=301,L]

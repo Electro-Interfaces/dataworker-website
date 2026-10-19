@@ -1,5 +1,4 @@
 import PageLayout from '@/react-app/components/PageLayout';
-import HexagonPattern from '@/react-app/components/HexagonPattern';
 import { Link } from 'react-router';
 import {
   Users,
@@ -19,8 +18,8 @@ import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 export default function AboutPage() {
   usePageMeta({
     title: 'О нас',
-    description: 'DataWorker — команда экспертов в разработке программного обеспечения',
-    keywords: 'DataWorker, о компании, команда разработчиков, экспертиза, инжиниринговый центр'
+    description: 'ElsyPlus — команда экспертов в разработке программного обеспечения для топливной отрасли',
+    keywords: 'ElsyPlus, о компании, команда разработчиков, экспертиза, автоматизация АЗС'
   });
   const teamRoles = [
     {
@@ -79,43 +78,27 @@ export default function AboutPage() {
     }
   ];
 
-  const stats = [
-    { value: '20', label: 'Лет опыта' },
-    { value: '50+', label: 'Проектов' },
-    { value: '24/7', label: 'Поддержка' }
-  ];
-
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-navy-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-navy-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+      <section className="pt-16 lg:pt-20 pb-64 lg:pb-96 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/tradesuite-hero.jpg)' }}
+        />
+        <div className="absolute inset-0 bg-navy-950/40" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-left">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+            Команда ElsyPlus
+          </h1>
         </div>
 
-        <HexagonPattern id="hexagons-about" />
-
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-navy-400 animate-pulse" />
-            <span className="text-xs font-semibold text-white tracking-wide uppercase">О нас</span>
-          </div>
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-            Инжиниринговый центр DataWorker
-          </h1>
-          <p className="text-lg lg:text-xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto mb-12">
-            Мы создаем технологические решения, которые помогают бизнесу работать автономно и эффективно в любых условиях
-          </p>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 lg:gap-16 border-t border-white/10 pt-8 max-w-xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs lg:text-sm text-navy-200/60 uppercase tracking-wider font-medium">{stat.label}</div>
-              </div>
-            ))}
+        <div className="absolute bottom-8 lg:bottom-12 left-0 right-0 z-10 px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg lg:text-xl text-white/80 font-light leading-relaxed max-w-2xl">
+              Мы создаем технологические решения, которые помогают бизнесу работать автономно и эффективно в любых условиях
+            </p>
           </div>
         </div>
       </section>
@@ -129,10 +112,10 @@ export default function AboutPage() {
                 Наша миссия
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                DataWorker развивает экосистему TradeSuite — комплекс продуктов для автоматизации топливного ритейла. От терминалов самообслуживания до облачных платформ управления сетями АЗС.
+                ElsyPlus — команда инженеров и разработчиков, объединённая многолетним опытом в автоматизации топливного ритейла. Мы развиваем экосистему TradeSuite — от терминалов самообслуживания до облачных платформ управления сетями АЗС.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Мы также предоставляем услуги заказной разработки, применяя экспертизу, полученную при создании собственных продуктов.
+                Наша экспертиза основана на глубоком знании отрасли и десятилетиях практического опыта. Мы также предоставляем услуги заказной разработки, применяя компетенции, отточенные при создании собственных продуктов.
               </p>
               <div className="space-y-4">
                 {['Собственные продукты и R&D', 'Опыт работы с крупным бизнесом', 'Полный цикл разработки'].map((item, index) => (

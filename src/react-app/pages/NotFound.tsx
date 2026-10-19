@@ -5,8 +5,8 @@ import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 export default function NotFoundPage() {
   usePageMeta({
     title: '404 — Страница не найдена',
-    description: 'Запрашиваемая страница не существует или была перемещена. Перейдите на главную страницу DataWorker.',
-    keywords: '404, страница не найдена, ошибка, DataWorker'
+    description: 'Запрашиваемая страница не существует или была перемещена. Перейдите на главную страницу ElsyPlus.',
+    keywords: '404, страница не найдена, ошибка, ElsyPlus'
   });
 
   return (

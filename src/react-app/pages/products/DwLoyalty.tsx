@@ -378,10 +378,10 @@ export default function DwLoyaltyPage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              to="/products/trade-frame"
+              to="/products/trade-control"
               className="px-8 py-4 bg-gray-100 text-gray-700 border-2 border-gray-200 rounded-2xl font-bold text-lg hover:bg-gray-200 transition-all duration-300"
             >
-              Платформа TradeFrame
+              Платформа TradeControl
             </Link>
           </div>
         </div>

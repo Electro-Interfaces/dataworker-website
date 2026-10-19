@@ -255,7 +255,7 @@ export default function ServicesPage() {
               Почему выбирают нас
             </h2>
             <p className="text-lg text-navy-100 max-w-2xl mx-auto">
-              Преимущества работы с командой DataWorker
+              Преимущества работы с командой ElsyPlus
             </p>
           </div>
 

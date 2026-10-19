@@ -18,11 +18,11 @@ import {
 } from 'lucide-react';
 import { usePageMeta } from '@/react-app/hooks/usePageMeta';
 
-export default function TradeFramePage() {
+export default function TradeControlPage() {
   usePageMeta({
-    title: 'TradeFrame',
+    title: 'TradeControl',
     description: 'Облачная платформа для управления сетью АЗС',
-    keywords: 'TradeFrame, облачная платформа, управление сетью АЗС, SaaS, топливный бизнес'
+    keywords: 'TradeControl, облачная платформа, управление сетью АЗС, SaaS, топливный бизнес'
   });
   const [activeModule, setActiveModule] = useState(0);
 
@@ -80,7 +80,7 @@ export default function TradeFramePage() {
       title: 'Уведомления',
       subtitle: '/settings/notifications',
       description: 'Telegram Bot и Email оповещения. Автопроверки: критический уровень топлива (каждые 4ч), оборудование offline (каждые 30мин), переполнение купюроприемника, незакрытые смены.',
-      features: ['Telegram @TradeFrameDW_Bot', 'Email-канал', 'Приоритеты событий', 'Режим "Не беспокоить"'],
+      features: ['Telegram @TradeControlDW_Bot', 'Email-канал', 'Приоритеты событий', 'Режим "Не беспокоить"'],
       image: 'images/notifications.png'
     },
     {
@@ -103,17 +103,17 @@ export default function TradeFramePage() {
 
   const tradePointTypes = [
     {
-      code: 'FP',
-      name: 'FuelPoint',
+      code: 'АЗС',
+      name: 'АЗС',
       description: 'Классическая АЗС с оператором',
-      fullDescription: 'Традиционная автозаправочная станция с операторским обслуживанием. Полный контроль через TradeFrame с интеграцией кассового ПО.',
+      fullDescription: 'Традиционная автозаправочная станция с операторским обслуживанием. Полный контроль через TradeControl с интеграцией кассового ПО.',
       icon: <Fuel className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Операторский режим', 'Кассовое ПО STS POS', 'Магазин и кафе', 'Любые виды топлива']
     },
     {
-      code: 'AP',
-      name: 'AutoPoint',
+      code: 'ААЗС',
+      name: 'ААЗС',
       description: 'Автоматическая АЗС',
       fullDescription: 'Полностью автоматизированная станция без персонала. Круглосуточная работа с удалённым мониторингом и управлением.',
       icon: (
@@ -139,27 +139,27 @@ export default function TradeFramePage() {
       features: ['Без персонала 24/7', 'Удалённое управление', 'Видеонаблюдение', 'Автоинкассация']
     },
     {
-      code: 'FP+SP',
-      name: 'FuelPoint + SelfPoint',
+      code: 'АЗС+ТСО',
+      name: 'АЗС + ТСО',
       description: 'Гибридный режим работы',
-      fullDescription: 'SelfPoint устанавливается как дополнительный модуль к станции с оператором. Днём — два потока клиентов, ночью — автоматический режим без персонала.',
+      fullDescription: 'ТСО устанавливается как дополнительный модуль к станции с оператором. Днём — два потока клиентов, ночью — автоматический режим без персонала.',
       icon: <Smartphone className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Ускорение обслуживания', 'Круглосуточная работа', 'Экономия на сменах', 'Гибкое переключение']
     },
     {
-      code: 'GP',
-      name: 'GasPoint',
-      description: 'АГЗС для сжиженного газа',
+      code: 'АГЗС',
+      name: 'АГЗС',
+      description: 'Газовая заправочная станция',
       fullDescription: 'Автогазозаправочная станция для СУГ (пропан-бутан). Специализированный учёт и контроль заправки газового топлива.',
       icon: <Zap className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
       features: ['Учёт СУГ', 'Контроль давления', 'Температурная коррекция', 'Специальные датчики']
     },
     {
-      code: 'CP',
-      name: 'CorpPoint',
-      description: 'Корпоративная заправка',
+      code: 'ВАЗС',
+      name: 'Ведомственная АЗС',
+      description: 'Закрытая заправка предприятия',
       fullDescription: 'Закрытая заправочная станция на территории предприятия. Авторизация по корпоративным картам, учёт топлива по водителям и транспортным средствам.',
       icon: <Shield className="w-8 h-8" />,
       gradient: 'from-navy-700 to-navy-800',
@@ -188,7 +188,7 @@ export default function TradeFramePage() {
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 leading-[0.9] tracking-tight">
-                Trade<span className="text-navy-200">Frame</span>
+                Trade<span className="text-navy-200">Control</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-navy-100 leading-relaxed mb-10 font-light max-w-xl">
@@ -210,7 +210,7 @@ export default function TradeFramePage() {
                 <div className="relative rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm overflow-hidden shadow-2xl">
                   <img
                     src={`${import.meta.env.BASE_URL}images/dashboard-screen.png`}
-                    alt="TradeFrame Dashboard"
+                    alt="TradeControl Dashboard"
                     className="w-[550px] h-auto"
                     loading="lazy"
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -228,7 +228,7 @@ export default function TradeFramePage() {
               <div className="relative rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-sm overflow-hidden shadow-xl">
                 <img
                   src={`${import.meta.env.BASE_URL}images/dashboard-screen.png`}
-                  alt="TradeFrame Dashboard"
+                  alt="TradeControl Dashboard"
                   className="w-full h-auto"
                   loading="lazy"
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -250,7 +250,7 @@ export default function TradeFramePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-6 lg:mb-8 mx-auto max-w-3xl">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2 mx-auto">
-              Функции TradeFrame
+              Функции TradeControl
             </h2>
             <p className="text-lg text-gray-500 mx-auto">
               Всё необходимое для управления топливным бизнесом
@@ -357,7 +357,7 @@ export default function TradeFramePage() {
               Типы торговых точек
             </h2>
             <p className="text-lg text-gray-500 max-w-3xl mx-auto">
-              TradeFrame работает с любым форматом топливного бизнеса — от классических АЗС до автоматических станций
+              TradeControl работает с любым форматом топливного бизнеса — от классических АЗС до автоматических станций
             </p>
           </div>
 
@@ -424,7 +424,7 @@ export default function TradeFramePage() {
             Готовы автоматизировать вашу сеть?
           </h2>
           <p className="text-xl text-navy-100 mb-8">
-            Получите персональную демонстрацию платформы TradeFrame
+            Получите персональную демонстрацию платформы TradeControl
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

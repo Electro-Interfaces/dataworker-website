@@ -325,7 +325,7 @@ export function IntegrationsIllustration() {
         <rect x="305" y="105" width="75" height="50" rx="8" fill="white" stroke="#F59E0B" strokeWidth="2" />
         <rect x="317" y="115" width="50" height="30" rx="5" fill="#FEF3C7" />
         <text x="328" y="135" fill="#92400E" fontSize="10" fontWeight="bold">Сеть</text>
-        <text x="305" y="168" fill="#92400E" fontSize="9" fontWeight="bold">TradeFrame</text>
+        <text x="305" y="168" fill="#92400E" fontSize="9" fontWeight="bold">TradeControl</text>
       </g>
       <path d="M245 130 L305 130" stroke="#F59E0B" strokeWidth="2" strokeDasharray="4 3" />
 

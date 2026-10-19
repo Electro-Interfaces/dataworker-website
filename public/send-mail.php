@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: https://dataworker.ru');
+header('Access-Control-Allow-Origin: https://elsyplus.ru');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
@@ -44,11 +44,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Email settings
-$to = 'info@dataworker.ru';
-$subject = 'Новая заявка с сайта DataWorker';
+$to = 'info@elsyplus.ru';
+$subject = 'Новая заявка с сайта ElsyPlus';
 
 // Build email body
-$body = "Новая заявка с сайта dataworker.ru\n";
+$body = "Новая заявка с сайта elsyplus.ru\n";
 $body .= "================================\n\n";
 $body .= "Имя: $name\n";
 $body .= "Email: $email\n";
@@ -61,10 +61,10 @@ $body .= "Отправлено: " . date('d.m.Y H:i:s') . "\n";
 
 // Email headers
 $headers = [
-    'From: noreply@dataworker.ru',
+    'From: noreply@elsyplus.ru',
     'Reply-To: ' . $email,
     'Content-Type: text/plain; charset=UTF-8',
-    'X-Mailer: DataWorker Website'
+    'X-Mailer: ElsyPlus Website'
 ];
 
 // Send email

@@ -15,7 +15,7 @@ import TermsPage from "@/react-app/pages/Terms";
 // Product pages
 import ProductDwTerminalPage from "@/react-app/pages/products/DwTerminal";
 import ProductDwStationPage from "@/react-app/pages/products/DwStation";
-import ProductTradeFramePage from "@/react-app/pages/products/TradeFrame";
+import ProductTradeControlPage from "@/react-app/pages/products/TradeControl";
 import TradeCorpPage from "@/react-app/pages/products/TradeCorp";
 import TradeGatePage from "@/react-app/pages/products/TradeGate";
 import DwLoyaltyPage from "@/react-app/pages/products/DwLoyalty";
@@ -47,7 +47,7 @@ export default function App() {
         {/* Product pages */}
         <Route path="/products/dw-terminal" element={<ProductDwTerminalPage />} />
         <Route path="/products/dw-station" element={<ProductDwStationPage />} />
-        <Route path="/products/trade-frame" element={<ProductTradeFramePage />} />
+        <Route path="/products/trade-control" element={<ProductTradeControlPage />} />
         <Route path="/products/trade-corp" element={<TradeCorpPage />} />
         <Route path="/products/trade-gate" element={<TradeGatePage />} />
         <Route path="/products/dw-loyalty" element={<DwLoyaltyPage />} />

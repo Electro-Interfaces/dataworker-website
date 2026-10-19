@@ -220,7 +220,7 @@ export default function TradeGatePage() {
         title="Готовы подключить интеграцию?"
         subtitle="Свяжитесь с нами для обсуждения интеграции TradeGate в вашу инфраструктуру"
         primaryLink={{ href: '/contact', text: 'Обсудить проект' }}
-        secondaryLink={{ href: '/products/trade-frame', text: 'Платформа TradeFrame' }}
+        secondaryLink={{ href: '/products/trade-control', text: 'Платформа TradeControl' }}
       />
     </PageLayout>
   );
